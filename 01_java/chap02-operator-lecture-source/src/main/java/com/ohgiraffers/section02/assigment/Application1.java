@@ -12,7 +12,7 @@ public class Application1 {
         int num = 12;
         System.out.println("num = " + num);
 
-        num = num + 3;
+        num = num + 3;              // 메모리를 두번 찾아가는 꼴이 됨 -> 복합연산자 사용 해결
         System.out.println("num = " + num);
 
         num += 3;
