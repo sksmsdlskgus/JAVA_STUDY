@@ -11,7 +11,7 @@ public class Application1 {
          *  3. 경우에 따라 생략이 가능하다. (하지만 자동으로 작성되는 내용이다.) (같은 패키지일 떄는 생략 가능)
          *
          */
-        
+
 
         /* 설명. non-static 메소드 호출해 보기 (feat.다른패키지에 있는) */
         com.ohgiraffers.section01.method.Calculator calculator = new com.ohgiraffers.section01.method.Calculator();
