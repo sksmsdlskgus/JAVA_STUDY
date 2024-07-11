@@ -1,4 +1,4 @@
-package com.ohgiraffers.secyion02.assigment;
+package com.ohgiraffers.section02.assigment;
 
 public class Application1 {
 
