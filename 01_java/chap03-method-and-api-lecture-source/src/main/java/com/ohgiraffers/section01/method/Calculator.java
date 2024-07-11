@@ -22,6 +22,7 @@ public class Calculator {
     public  int minNumgersOf(int first, int second){
         return (first > second) ? second : first;
     }
+
     public static int maxNumbersOf(int first, int second){
         return (first > second) ? first : second;
     }
