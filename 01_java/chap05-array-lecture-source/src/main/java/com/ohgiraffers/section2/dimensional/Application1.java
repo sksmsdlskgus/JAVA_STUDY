@@ -34,6 +34,15 @@ public class Application1 {
 
         /* 설명. Arrays.toString()은 1차원 배열만 확인 가능하다. */
         System.out.println("2차원 배열도 한번에 확인 될까? " + Arrays.toString(iArr1));
+        
+        /* 설명. 가변배열에 다양한 길이의 1차원 배열을 적용해 보자 */
+        iArr2[0] = new int[]{1,2,3};
+        iArr2[1] = new int[]{1,2,3,4};
+        iArr2[2] = new int[]{3,3};
+
+        for (int i = 0; i < iArr2.length; i++) {
+            System.out.println(Arrays.toString(iArr2[i]));
+        }
 
 
 
