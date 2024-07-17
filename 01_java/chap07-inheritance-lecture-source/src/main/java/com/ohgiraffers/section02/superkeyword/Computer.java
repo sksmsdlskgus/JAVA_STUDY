@@ -1,4 +1,4 @@
-package com.ohgiraffers.section01.section02.superkeyword;
+package com.ohgiraffers.section02.superkeyword;
 
 import java.util.Date;
 
