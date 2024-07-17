@@ -63,8 +63,14 @@ public class Application1 {
             ((Rabbit) an3).jump();
             System.out.println("an3는 토끼지");
         }
+
         if(an3 instanceof Animal){
             System.out.println("Animal은 맞지");
         }
+
+        /* 설명. 다형성은 상속관계의 객체들간에 형변환 */
+        Animal animal2 = new Tiger();   //다형성을 적용, 자동형변환(auto up-cating), 묵시적 형변환
+        Rabbit rabbit2 = (Rabbit) an3;  //다형성이 적용되지 않음, 강제형변환(down-casting), 명시적 형변환
+
     }
 }
