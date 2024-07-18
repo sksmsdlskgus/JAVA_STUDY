@@ -3,7 +3,7 @@ package com.ohgiraffers.section02.string;
 public class Application2 {
     public static void main(String[] args) {
 
-        /* 수업목표. 문저욜 객체를 생성하는 다양한 방법을 숙지하고 인스턴스가 생성되는 방식을 이해할 수 있다 */
+        /* 수업목표. 문자열 객체를 생성하는 다양한 방법을 숙지하고 인스턴스가 생성되는 방식을 이해할 수 있다 */
         /* 필기.
          *  문자열 객체를 만드는 방법
          *  1. "" 리터럴 형태: 동일한 값을 가지는 인스턴스(동등(h, e) 객체)를 단일 인스턴스로 관리한다.
@@ -21,7 +21,7 @@ public class Application2 {
         System.out.println("str2 == str3: " + (str2 == str3));
         System.out.println("str3 == str4: " + (str3 == str4));
 
-        /* 설명. equals와 hasgCode 확인 */
+        /* 설명. equals와 hashCode 확인 */
         System.out.println("str1.equals(str3): " + str1.equals(str3));
         System.out.println("str1.hashCode() == str3.hashCode(): " + (str1.hashCode() == str3.hashCode()));
 
