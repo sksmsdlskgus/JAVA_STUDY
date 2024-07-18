@@ -26,5 +26,12 @@ public class Application2 {
         System.out.println("str1.hashCode() == str3.hashCode(): " + (str1.hashCode() == str3.hashCode()));
 
         /* 설명. 문자열 비교는 (==)쓰지 말고 (.equals()) 사용하자. */
+
+        /* 설명. 문자열은 불변객체(immutable object)로 변화를 주면 항상 새로운 객체(인스턴스)를 생성한다. */
+        String str = "apple";
+        System.out.println(System.identityHashCode(str));
+        str += ", banana";
+        System.out.println(System.identityHashCode(str));
+        System.out.println("fruit: " + str);
     }
 }
