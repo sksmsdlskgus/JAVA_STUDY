@@ -20,6 +20,7 @@ public class Computer extends Product{
         this.operatingSystem = operatingSystem;
     }
 
+
     public Computer(String code, String brand, String name, int price, Date manufaturingDate, String cpu, int hd, int ram, String operatingSystem) {
         super(code, brand, name, price, manufaturingDate);
         this.cpu = cpu;

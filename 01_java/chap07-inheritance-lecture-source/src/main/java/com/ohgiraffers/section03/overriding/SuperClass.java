@@ -1,5 +1,8 @@
 package com.ohgiraffers.section03.overriding;
 
+
+/* 설명. class가 final 키워드가 불으면 부모 클래스가 될 수 없다. */
+//public final class SuperClass {
 public class SuperClass {
 
     /* 수업목표. 오버라이딩(overring)에 대해 이해할 수 있다. */

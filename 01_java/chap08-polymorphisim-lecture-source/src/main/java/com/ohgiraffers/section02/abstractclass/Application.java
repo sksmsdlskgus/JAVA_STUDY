@@ -17,7 +17,7 @@ public class Application {
         *   쉽게 말해 불완전한 메소드라고 생각할 수 있다.
         *   불완전한 메소드를 하나라도 가진 클래스는 반드시 추상클래스가 되어야 한다.
         *    ex) public abstract void method(); */
-        
+
 //        Product product = new Product(); 추클은 객체생성 X
 
         /* 설명. abstract 메소드를 구현한 온전한 자식 클래스는 인스턴스(객체)를 생성할 수 있다. */
