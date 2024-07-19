@@ -14,7 +14,7 @@ public class Application5 {
 
         LocalTime localTime = LocalTime.parse(timeNow);
         LocalDate localDate = LocalDate.parse(dateNow);
-        LocalDateTime localDateTime = LocalDateTime.parse(dateNow + "T" + timeNow);
+        LocalDateTime localDateTime = LocalDateTime.parse(dateNow +"T"+ timeNow);
 
         System.out.println("LocalTime: " + localTime);
         System.out.println("LocalDate: " + localDate);
