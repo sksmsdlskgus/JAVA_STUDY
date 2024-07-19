@@ -1,4 +1,4 @@
-package com.ohgiraffers.secton04.wrapper;
+package com.ohgiraffers.section04.wrapper;
 
 public class Application3 {
     public static void main(String[] args) {

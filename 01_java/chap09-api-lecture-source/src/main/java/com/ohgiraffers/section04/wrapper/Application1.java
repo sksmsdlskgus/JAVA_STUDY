@@ -1,6 +1,4 @@
-package com.ohgiraffers.secton04.wrapper;
-
-import javax.swing.*;
+package com.ohgiraffers.section04.wrapper;
 
 public class Application1 {
     public static void main(String[] args) {
