@@ -22,8 +22,8 @@ public class Application {
         System.out.println("현재 파일의 상위 경로: " + file.getParent());
         System.out.println("파일의 절대 경로: " + file.getAbsolutePath());
 
-        boolean isDeleted = file.delete();
-        System.out.println("파일 삭제 여부: " + isDeleted);
+//        boolean isDeleted = file.delete();
+//        System.out.println("파일 삭제 여부: " + isDeleted);
 
 
     }
