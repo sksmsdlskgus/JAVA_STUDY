@@ -1,8 +1,6 @@
 package com.ohgiraffers.section03.filterstream;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class Application2 {
     public static void main(String[] args) {
@@ -25,5 +23,23 @@ public class Application2 {
                 throw new RuntimeException(e);
             }
         }
+
+        BufferedWriter bw = null;
+        OutputStreamWriter osw = null;
+        osw = new OutputStreamWriter(System.out);
+        bw = new BufferedWriter(osw);
+
+        try{
+            bw.write("println이 좋은거구만!~");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try{
+                if (bw != null) bw.close();
+            }catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
     }
 }
