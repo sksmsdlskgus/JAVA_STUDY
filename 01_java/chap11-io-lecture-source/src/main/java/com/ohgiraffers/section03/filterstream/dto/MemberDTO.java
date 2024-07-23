@@ -4,7 +4,10 @@ import java.io.Serializable;
 
 public class MemberDTO implements Serializable {
     private String id;
-    private String pwd;
+
+    /* 설명. transient 키워드가 붙은 필드는 직렬화에서 제외된다.
+    *   나중에 바꿨으면 기존 파일은 지우고 할 것. */
+    private transient String pwd;
     private String name;
     private String email;
     private int age;
