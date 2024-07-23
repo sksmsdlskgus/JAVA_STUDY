@@ -1,6 +1,8 @@
 package com.ohgiraffers.section01.list.dto;
 
-public class BookDTO {
+import java.io.Serializable;
+
+public class BookDTO implements Comparable<BookDTO> {
     private int number;
     private String title;
     private String author;
@@ -57,5 +59,31 @@ public class BookDTO {
                 ", author='" + author + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    /* 필기.
+    *   우리가 원하는 필드의 오름차순 또는 내림차순을 할 수 있다.
+    *   필드가 n개면 총 (n*2)가지의 정렬 기준을 가질 수 있다.(각각 ASC 또는 DESC)
+    *   정렬은 compareTo()메소드가 반환하는 int형의 부호에 따라 정해지게 되므로 오름차순과 내림차순은
+    *   부호만 달리 되도록 하면 된다.
+    *    ( 해당 필드가 String형일 경우는 String의 compareTo()메소드를 활용하자) */
+
+    @Override
+    public int compareTo(BookDTO o) {
+
+        /* 설명. 가격에 대한 오름차순 */
+//        return this.price - o.getPrice();
+
+        /* 설명. 가격에 대한 내림차순 */
+//        return o.getPrice() - this.price;
+//        return -(this.price - o.getPrice());
+
+        /* 설명. 책 제목에 대한 오름차순 */
+//        return this.title.compareTo(o.getTitle());
+
+        /* 설명. 책 제목에 대한 오름차순 */
+        return -this.title.compareTo(o.getTitle());
+
+
     }
 }
