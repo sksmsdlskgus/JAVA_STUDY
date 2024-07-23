@@ -6,6 +6,7 @@ public class Application {
         /* 수업목표. 제네릭(generic)에 대해 이해할 수 있다. */
         MyGenericTest mgt = new MyGenericTest();
 
+
         mgt.setValue("Hello World");
         mgt.setValue(1);
         mgt.setValue(3.14);

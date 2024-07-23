@@ -18,7 +18,7 @@ public class Application2 {
 
         /* 설명. Collections.sort를 활용한 정렬(Comparable 방식 또는 Comparator 방식) */
 //        Collections.sort(bookList);           // Comparable 방식
-        Collections.sort(bookList, new AscendingPrice());  // Comparator 방식
+        Collections.sort(bookList, new AscendingPrice());  // Comparator 방식  --> 기능 분할 따로 오버라이드 클래스 생성
 
         /* 설명. ArrayList가 제공하는 sort를 사용할 수도 있다. (다만 Comparator 기준만 가능) */
         bookList.sort(new AscendingPrice());

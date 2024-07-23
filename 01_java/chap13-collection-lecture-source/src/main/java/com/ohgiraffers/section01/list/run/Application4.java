@@ -6,7 +6,7 @@ public class Application4 {
     public static void main(String[] args) {
 
         /* 수업목표. Stack에 대해 이해하고 사용할 수 있다. */
-        /* 필기. 
+        /* 필기.
         *   Stack이란?
         *    후입선출(LIFO) 또는 선입후출(FILO)의 자료 구조로 push() pop(), peek()등의 메소드를
         *    활용하여 자료를 처리 할 수 있다.*/
