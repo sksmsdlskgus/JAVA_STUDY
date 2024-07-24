@@ -2,7 +2,6 @@ package com.ohgiraffers.section03.map.run;
 
 import com.ohgiraffers.section01.list.dto.BookDTO;
 
-import javax.xml.crypto.Data;
 import java.util.*;
 
 public class Application1 {
@@ -49,6 +48,14 @@ public class Application1 {
         while (iter.hasNext()) {
             String key = iter.next();
             System.out.println("key: " + key + ", value: " + hMap2.get(key));
+        }
+
+        /* 목차. 2. entrySet()을 활용한 iterator 반복하기(feat.key + value set으로 변환하자) */
+        Set<Map.Entry<String,String>> set = hMap2.entrySet();
+        Iterator<Map.Entry<String,String>> iterEntry = set.iterator();
+        while (iterEntry.hasNext()) {
+            Map.Entry<String,String> entry = iterEntry.next();
+            System.out.println("Key값 = " + entry.getKey() + ", Value값 = " + entry.getValue());
         }
 
     }
