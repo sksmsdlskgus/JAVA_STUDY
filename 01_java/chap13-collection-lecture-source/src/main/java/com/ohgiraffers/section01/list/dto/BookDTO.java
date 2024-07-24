@@ -1,6 +1,7 @@
 package com.ohgiraffers.section01.list.dto;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class BookDTO implements Comparable<BookDTO> {
     private int number;
@@ -69,6 +70,19 @@ public class BookDTO implements Comparable<BookDTO> {
     *    ( 해당 필드가 String형일 경우는 String의 compareTo()메소드를 활용하자) */
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BookDTO bookDTO = (BookDTO) o;
+        return Objects.equals(title, bookDTO.title) && Objects.equals(author, bookDTO.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, author);
+    }
+
+    @Override
     public int compareTo(BookDTO o) {
 
         /* 설명. 가격에 대한 오름차순 */
@@ -83,6 +97,8 @@ public class BookDTO implements Comparable<BookDTO> {
 
         /* 설명. 책 제목에 대한 오름차순 */
         return -this.title.compareTo(o.getTitle());
+
+
 
 
     }
