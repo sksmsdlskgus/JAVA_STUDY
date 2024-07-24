@@ -12,7 +12,7 @@ public class Application5 {
          *    대부분 LinkedList를 많이 사용한다.
          * */
 
-//        Queue queue = new LinkedList();
+       Queue que = new LinkedList();
 //        Queue<String> que = new LinkedList<>();
 //        LinkedList<String> que = new LinkedList<>();
         // LinkedList는 queue 중에서도 deque에 해당되어
@@ -20,7 +20,7 @@ public class Application5 {
 
         /* 설명. PriorityQueue를 활용하면 선입선출 + 정렬의 개념을 가져갈 수 있다. */
 //        PriorityQueue<String> que = new PriorityQueue<>(); // String의 기준대로 문자열 오름차순
-        PriorityQueue<String> que = new PriorityQueue<>(Collections.reverseOrder()); // 반대인 내림차순
+//        PriorityQueue<String> que = new PriorityQueue<>(Collections.reverseOrder()); // 반대인 내림차순
 
 
         que.offer("first");
