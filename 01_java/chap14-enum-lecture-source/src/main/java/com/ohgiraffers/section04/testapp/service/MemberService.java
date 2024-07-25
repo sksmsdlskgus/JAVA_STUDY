@@ -21,4 +21,14 @@ public class MemberService {
             System.out.println("member = " + member);
         }
     }
+
+    public void findAllMemberBy(int memNo) {
+      Member selectedMember =  mr.selectMemberBy(memNo);
+
+      if(selectedMember != null) {
+          System.out.println("조회된 회원은:  " + selectedMember.getId() + " 아이디 회원");
+      }else {
+          System.out.println("그런 회원은 없네요!~ ");
+      }
+    }
 }

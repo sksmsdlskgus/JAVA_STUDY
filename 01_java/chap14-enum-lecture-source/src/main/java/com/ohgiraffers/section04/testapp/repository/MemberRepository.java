@@ -49,8 +49,8 @@ public class MemberRepository {
             while (true) {
                 memberList.add((Member) ois.readObject());
             }
-        }catch (EOFException e){
-                System.out.println("회원 정보 모두 로딩됨...");
+        } catch (EOFException e) {
+            System.out.println("회원 정보 모두 로딩됨...");
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
@@ -87,5 +87,12 @@ public class MemberRepository {
 
     public ArrayList<Member> selectAllMembers() {
         return memberList;
+    }
+
+    public Member selectMemberBy(int memNo) {
+        for (Member mem : memberList) { // 성공했으면 반환
+            if (mem.getMemNo() == memNo) return mem;
+        } // 아니면 null 값 반환
+        return null;
     }
 }

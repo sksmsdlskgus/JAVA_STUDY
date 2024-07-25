@@ -23,7 +23,7 @@ public class Application {
 
             switch (input) {
                 case 1:ms.findAllMembers(); break;
-                case 2:break;
+                case 2:ms.findAllMemberBy(chooseMemNo()); break;
                 case 3:break;
                 case 4:break;
                 case 9:return;
@@ -32,4 +32,14 @@ public class Application {
             }
         }
     }
+
+
+    /* 설명. 회원 번호를 입력 받아 반환하는 메소드 */
+    private static int chooseMemNo() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("회원의 번호를 입력하세요: ");
+        return sc.nextInt();
+    }
+
+
 }
