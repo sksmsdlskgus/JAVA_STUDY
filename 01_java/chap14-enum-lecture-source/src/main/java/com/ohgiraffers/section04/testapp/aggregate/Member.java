@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Arrays;
 
 public class Member implements Serializable {
-    private String memee;
+    private int memNo;
     private String id;
     private String pwq;
     private int age;
@@ -15,8 +15,8 @@ public class Member implements Serializable {
     public Member() {
     }
 
-    public Member(String memee, String id, String pwq, int age, String[] hobbies, BloodType bloodType) {
-        this.memee = memee;
+    public Member(int memNo, String id, String pwq, int age, String[] hobbies, BloodType bloodType) {
+        this.memNo = memNo;
         this.id = id;
         this.pwq = pwq;
         this.age = age;
@@ -24,34 +24,58 @@ public class Member implements Serializable {
         this.bloodType = bloodType;
     }
 
-    public String getMemee() {
-        return memee;
+    public int getMemNo() {
+        return memNo;
+    }
+
+    public void setMemNo(int memNo) {
+        this.memNo = memNo;
     }
 
     public String getId() {
         return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getPwq() {
         return pwq;
+    }
+
+    public void setPwq(String pwq) {
+        this.pwq = pwq;
     }
 
     public int getAge() {
         return age;
     }
 
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public String[] getHobbies() {
         return hobbies;
+    }
+
+    public void setHobbies(String[] hobbies) {
+        this.hobbies = hobbies;
     }
 
     public BloodType getBloodType() {
         return bloodType;
     }
 
+    public void setBloodType(BloodType bloodType) {
+        this.bloodType = bloodType;
+    }
+
     @Override
     public String toString() {
         return "Member{" +
-                "memee='" + memee + '\'' +
+                "memNo=" + memNo +
                 ", id='" + id + '\'' +
                 ", pwq='" + pwq + '\'' +
                 ", age=" + age +

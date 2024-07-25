@@ -1,8 +1,14 @@
 package com.ohgiraffers.section04.testapp.run;
 
+import com.ohgiraffers.section04.testapp.repository.MemberRepository;
+import com.ohgiraffers.section04.testapp.service.MemberService;
+
 import java.util.Scanner;
 
 public class Application {
+
+    private  static final MemberService ms = new MemberService();
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
