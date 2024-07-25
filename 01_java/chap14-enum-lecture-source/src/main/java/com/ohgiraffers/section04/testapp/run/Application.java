@@ -28,7 +28,8 @@ public class Application {
                 case 2:ms.findAllMemberBy(chooseMemNo()); break;
                 case 3:ms.registMember(signUp()); break;
                 case 4:ms.removeMember(chooseMemNo()); break;
-                case 9:return;
+                case 9:
+                    System.out.println("회원관리 프로그램을 종료합니다."); return;
                 default:
                     System.out.println("번호를 잘못 입력하셨습니다.");
             }
