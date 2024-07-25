@@ -173,6 +173,7 @@ public class MemberRepository {
 
                 File file = new File("src/main/java/com/ohgiraffers/section04/testapp/db/memberDB.dat");
                 saveMembers(file,memberList);
+
                 /* 설명. 컬렉션의 모든 내용을 파일로 출력(덮어씌우기 */
                 return 1;
             }
