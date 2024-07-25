@@ -33,7 +33,13 @@ public class MemberRepository {
 
         /* 설명. 파일로 부터 회원 객체들을 입력받아 memberList에 쌓기  */
         loadMember(file);
+
+        /* 설명. loadMember()메소드를 통해 잘 불러와 졌는지 확인 */
+//        for(Member member :memberList){
+//            System.out.println("member = " + member);
+//        }
     }
+
 
     private void loadMember(File file) {
         ObjectInputStream ois = null;
@@ -44,7 +50,7 @@ public class MemberRepository {
                 memberList.add((Member) ois.readObject());
             }
         }catch (EOFException e){
-                System.out.println("회원 정보 모두 로딩된...");
+                System.out.println("회원 정보 모두 로딩됨...");
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
@@ -77,5 +83,9 @@ public class MemberRepository {
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    public ArrayList<Member> selectAllMembers() {
+        return memberList;
     }
 }

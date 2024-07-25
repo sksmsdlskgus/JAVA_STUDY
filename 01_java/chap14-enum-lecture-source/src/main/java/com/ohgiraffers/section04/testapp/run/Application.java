@@ -1,6 +1,5 @@
 package com.ohgiraffers.section04.testapp.run;
 
-import com.ohgiraffers.section04.testapp.repository.MemberRepository;
 import com.ohgiraffers.section04.testapp.service.MemberService;
 
 import java.util.Scanner;
@@ -23,7 +22,7 @@ public class Application {
             int input = sc.nextInt();
 
             switch (input) {
-                case 1:break;
+                case 1:ms.findAllMembers(); break;
                 case 2:break;
                 case 3:break;
                 case 4:break;
