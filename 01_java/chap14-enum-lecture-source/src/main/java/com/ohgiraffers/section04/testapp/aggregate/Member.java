@@ -22,6 +22,7 @@ public class Member implements Serializable {
         this.hobbies = hobbies;
     }
 
+
     public Member(int memNo, String id, String pwq, int age, String[] hobbies, BloodType bloodType) {
         this.memNo = memNo;
         this.id = id;

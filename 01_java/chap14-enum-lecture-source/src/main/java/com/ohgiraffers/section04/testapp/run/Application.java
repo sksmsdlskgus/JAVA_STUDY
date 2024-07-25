@@ -29,7 +29,7 @@ public class Application {
                 case 2:ms.findAllMemberBy(chooseMemNo()); break;
                 case 3:ms.registMember(signUp()); break;
                 case 4:ms.removeMember(chooseMemNo()); break;
-                case 5:break;
+                case 5:ms.modifyMember(chooseinfo());break;
                 case 9:
                     System.out.println("회원관리 프로그램을 종료합니다."); return;
                 default:
@@ -37,6 +37,7 @@ public class Application {
             }
         }
     }
+
 
     private static Member signUp() {
         Member newMember = null;
@@ -90,9 +91,17 @@ public class Application {
     /* 설명. 회원 번호를 입력 받아 반환하는 메소드 */
     private static int chooseMemNo() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("회원의 번호를 입력하세요: ");
+        System.out.printf("회원의 번호를 입력하세요: ");
         return sc.nextInt();
     }
 
-
+    private static int chooseinfo () {
+        Scanner sc = new Scanner(System.in);
+        chooseMemNo();
+        System.out.println("1.아이디 2.패스워드 3.나이 4.취미 5.혈액형");
+        System.out.printf("수정하실 정보번호를 입력하세요: ");
+        int modifyOption = sc.nextInt();
+        return modifyOption;
+    }
+    
 }

@@ -180,4 +180,8 @@ public class MemberRepository {
         }
         return 0;
     }
+
+    public int updateMember(int chooseinfo) {
+        return 0;
+    }
 }

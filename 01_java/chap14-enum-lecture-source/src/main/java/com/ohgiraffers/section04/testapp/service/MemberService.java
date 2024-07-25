@@ -55,4 +55,9 @@ public class MemberService {
         }
         System.out.println("회원 번호 틀렸나 본데요?");
     }
+
+
+    public void modifyMember(int chooseinfo) {
+
+    }
 }
