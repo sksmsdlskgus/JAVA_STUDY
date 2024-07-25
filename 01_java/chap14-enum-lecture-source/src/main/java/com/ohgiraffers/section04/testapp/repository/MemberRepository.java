@@ -133,7 +133,7 @@ public class MemberRepository {
     /* 설명. insert를 하기 위해 회원 번호를 발생시키는데 사용되는 마지막 회원의 번호 추출 기능 메소드  */
     public int selectLastMemberNo() {
 
-        /* 설명. 마지막 회원을 조회해서 그 회원의 회원번호를 확인  (항상 맞지는 X)*/
+        /* 설명. 마지막 회원을 조회해서 그 회원의 회원번호를 확인 */
         Member lastMember = memberList.get(memberList.size() - 1);
         return lastMember.getMemNo();
 

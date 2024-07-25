@@ -19,6 +19,7 @@ public class Application {
             System.out.println("2. 회원 찾기");
             System.out.println("3. 회원 가입");
             System.out.println("4. 회원 탈퇴");
+            System.out.println("5. 회원 수정");
             System.out.println("9. 프로그램 종료");
             System.out.print("메뉴를 선택해 주세요: ");
             int input = sc.nextInt();
@@ -28,6 +29,7 @@ public class Application {
                 case 2:ms.findAllMemberBy(chooseMemNo()); break;
                 case 3:ms.registMember(signUp()); break;
                 case 4:ms.removeMember(chooseMemNo()); break;
+                case 5:break;
                 case 9:
                     System.out.println("회원관리 프로그램을 종료합니다."); return;
                 default:
