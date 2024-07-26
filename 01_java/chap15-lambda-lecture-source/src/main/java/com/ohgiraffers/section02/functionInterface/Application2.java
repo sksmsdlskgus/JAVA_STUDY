@@ -1,8 +1,6 @@
-package com.ohgireffers.section02.functionInterface;
+package com.ohgiraffers.section02.functionInterface;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Locale;
 import java.util.function.BooleanSupplier;
 import java.util.function.Supplier;
 

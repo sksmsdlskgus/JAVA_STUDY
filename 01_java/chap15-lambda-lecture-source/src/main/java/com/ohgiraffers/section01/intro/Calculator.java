@@ -1,4 +1,4 @@
-package com.ohgireffers.section01.intro;
+package com.ohgiraffers.section01.intro;
 
 /* 설명. FunctionalInterface민 람다식으로 적용 가능하다. */
 @FunctionalInterface

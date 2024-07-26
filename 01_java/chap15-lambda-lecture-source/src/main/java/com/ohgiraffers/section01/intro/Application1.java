@@ -1,4 +1,4 @@
-package com.ohgireffers.section01.intro;
+package com.ohgiraffers.section01.intro;
 
 public class Application1 {
     public static void main(String[] args) {

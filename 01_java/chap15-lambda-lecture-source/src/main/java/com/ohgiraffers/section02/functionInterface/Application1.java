@@ -1,4 +1,4 @@
-package com.ohgireffers.section02.functionInterface;
+package com.ohgiraffers.section02.functionInterface;
 
 import java.time.LocalTime;
 import java.util.Random;

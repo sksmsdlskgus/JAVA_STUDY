@@ -1,4 +1,4 @@
-package com.ohgireffers.section01.intro;
+package com.ohgiraffers.section01.intro;
 
 public class CalculatorImpl implements Calculator{
 
