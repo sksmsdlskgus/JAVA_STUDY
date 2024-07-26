@@ -25,8 +25,8 @@ public class Application1 {
         *   람다식은 익명함수로 이름을 별도로 작성하지 않지만 인터페이스의 하위 구현체를 생성하며 유일하게 있는 추상메소드를
         *    오버라이딩 하는 개념이기 때문에 익명함수가 가능하다.
         *    즉, 람다식을 활용하기 위한 인터페이스는 추상메소드를 단 하나만 가져야 한다. 그런 인터페이스를 FuntionalInterface라고 한다.*/
-//        Calculator c3 = (x, y) -> {return x * y;};
-        Calculator c3 = (x, y) -> x * y;
+//        Calculator c3 = (x, y) -> {return x + y;};
+        Calculator c3 = (x, y) -> x + y;
         System.out.println("10과 20의 합은: " + c3.sumTwoNumbers(10,20));
 
 
