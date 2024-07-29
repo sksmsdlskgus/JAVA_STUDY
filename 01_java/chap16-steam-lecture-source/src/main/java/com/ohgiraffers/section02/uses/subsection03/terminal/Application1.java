@@ -16,7 +16,7 @@ public class Application1 {
 
         /* 설명. OptionalInt는 '결과 없음'을 나타내야 하는 명확한 요구가 있는 메소드 반환 형식으로 사용하기 위한 타입이다. */
         OptionalInt max = IntStream.range(1,10).max();
-//        OptionalInt max = IntStream.range(1,1).max();     
+//        OptionalInt max = IntStream.range(1,1).max();
 //  OptionalInt: 기본자료형도 존재하지 않으면 empty의 개념을 주기위한 타입
         OptionalInt min = IntStream.range(1,10).min();
         System.out.println("max = " + max);
