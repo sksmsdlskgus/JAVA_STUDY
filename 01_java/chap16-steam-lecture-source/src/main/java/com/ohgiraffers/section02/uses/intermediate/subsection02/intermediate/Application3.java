@@ -1,4 +1,4 @@
-package com.ohgiraffers.section02.uses.subsection01.subsection02.intermediate;
+package com.ohgiraffers.section02.uses.intermediate.subsection02.intermediate;
 
 import java.util.Arrays;
 import java.util.Collection;
