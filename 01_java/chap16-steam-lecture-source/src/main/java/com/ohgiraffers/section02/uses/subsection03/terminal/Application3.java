@@ -1,8 +1,6 @@
 package com.ohgiraffers.section02.uses.subsection03.terminal;
 
 
-import com.ohgiraffers.section02.uses.subsection03.terminal.terminal.Member;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;

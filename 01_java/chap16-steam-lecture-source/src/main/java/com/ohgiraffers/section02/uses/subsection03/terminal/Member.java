@@ -1,4 +1,4 @@
-package com.ohgiraffers.section02.uses.subsection03.terminal.terminal;
+package com.ohgiraffers.section02.uses.subsection03.terminal;
 
 public class Member {
     private String memberId;
