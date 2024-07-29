@@ -15,7 +15,8 @@ public class Application2 {
          *  rangeClosed(시작값, 종료값): 시작값부터 1씩 증가하는 숫자로 종료값까지 포함한 스트림 생성
          * */
         IntStream intStream = IntStream.range(5, 10);
-        intStream.forEach(value -> System.out.print(value + " "));
+//        intStream.forEach(value -> System.out.print(value + " "));
+        intStream.forEach(System.out::print);
         System.out.println();
 
         LongStream longStream = LongStream.rangeClosed(5, 10);

@@ -12,7 +12,7 @@ public class Application1 {
         /* 필기. Arrays.stream(배열): 배열 자료형을 Stream 자료형으로 변환 */
        /* 설명. 1. 배열로 스트림 생성 */
         System.out.println("=========배열로 스트림 생성=======");
-        Stream<String> strStream = Stream.of(sArr);
+        Stream<String> strStream = Arrays.stream(sArr);
         strStream.forEach(System.out::println);
 
         System.out.println(); //구분을 위한 개행
@@ -32,7 +32,8 @@ public class Application1 {
         /* 설명. 3. iterate()를 활용하여 수열 형태의 스트림을 생성 */
         System.out.println("=========iterate로 스트림 생성=========");
         Stream<Integer> intStream = Stream.iterate(10, value -> value * 2).limit(10) ;
-        intStream.forEach(value-> System.out.println(value + ""));
+        intStream.forEach(value-> System.out.print(value + " "));
+
 
     }
 }
