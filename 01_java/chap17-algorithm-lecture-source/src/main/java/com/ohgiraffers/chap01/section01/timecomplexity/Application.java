@@ -42,4 +42,20 @@ public class Application {
         /* 설명. 찿고자 하는 값이 배열에 없다면  -1을 반환  */
         return -1;
     }
+
+    /* 설명. 선형 시간 O(n) */
+    public static int[] reverse(int[] arr) {
+        int[] reversed = new int[arr.length];
+        for (int i = arr.length - 1; i >= 0; i--) {
+            reversed[arr.length - 1 - i] = arr[i];
+        }
+        return reversed;
+    }
+
+    /* 설명. 지수 시간 O(2^n) */
+    public static int fibonacci (int n) {
+        if (n < 2) return n;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+
+    }
 }
