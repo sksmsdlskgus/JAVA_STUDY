@@ -81,7 +81,7 @@ public class Application1 {
     }
 
     /* 설명. 넘어온 데이터를 가지고 버블 정렬 알고리즘 작성 시작 */
-    private static void solution(int length, int[] arr) {
+    public static void solution(int length, int[] arr) {
         for (int i = 0; i <length-1; i++) {
             System.out.println((i + 1) + "번째 순회 " + Arrays.toString(arr));
             for (int j = 0; j < length-1; j++) {
