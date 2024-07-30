@@ -1,4 +1,4 @@
-package com.ohgiraffers.chap01.section01.sorting;
+package com.ohgiraffers.chap02.section01.sorting;
 
 /* 수업목표. 버블정렬을 이해할 수 있다. */
 /* 필기.
@@ -17,7 +17,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Scanner;
 import java.util.stream.IntStream;
 
 public class Application1 {

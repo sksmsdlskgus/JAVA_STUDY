@@ -1,5 +1,6 @@
 package com.ohgiraffers.chap01.section01.sorting;
 
+import com.ohgiraffers.chap02.section01.sorting.Application1;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -10,8 +11,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class Application1Test {
 
