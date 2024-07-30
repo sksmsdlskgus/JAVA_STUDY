@@ -2,12 +2,13 @@ package com.ohgiraffers.chap02.section01.sorting;
 
 /* 수업목표. 삽입 정렬을 이해할 수 있다. */
 /* 필기.
-*    삽입 정렬(Insertion Sort)
-*     이미 정렬된 데이터 범위에 정렬되지 않은 데이터를 적절한 위치에 삽입시켜 정렬하는 방식이다.
-*      시간 복잡도는 O(n^2)이라 효율적이지는 않다.
-*      해당 위치에 있는 값을 앞의 어떤 위치에 들어갈지 훑어보며 밀어주다 원하는 위치에 넣게 된다.
-* */
+ *  삽입 정렬(Insertion Sort)
+ *   이미 정렬된 데이터 범위에 정렬되지 않은 데이터를 적절한 위치에 삽입시켜 정렬하는 방식이다.
+ *   시간복잡도는 O(n^2)이라 효율적이지는 않다.
+ *   해당 위치에 있는 값을 앞의 어떤 위치에 들어갈지 훑어보며 밀어주다 원하는 위치에 넣게 된다.
+ * */
 public class Application3 {
+
     /* 설명.
      *  문제 내용
      *   : N개의 정수가 주어졌을 때, 삽입 정렬 알고리즘을 사용하여 오름차순으로 정렬하는 프로그램을 작성하시오.
@@ -33,24 +34,14 @@ public class Application3 {
      * */
 
     public static void solution(int length, int[] arr) {
-        // length만큼 반복합니다. i는 현재 삽입할 원소의 인덱스입니다.
-        for (int i = 0; i < length; i++) {
-            // 현재 삽입할 원소를 temp에 저장합니다.
+        for (int i = 1; i < length; i++) {
             int temp = arr[i];
             int j;
-
-            // 현재 원소를 적절한 위치에 삽입하기 위해, 이미 정렬된 부분(arr[0] ~ arr[i-1])에서 비교를 시작합니다.
             for (j = i - 1; j >= 0; j--) {
-                // 현재 원소 temp가 arr[j]보다 작으면, arr[j]를 한 칸 뒤로 밀어야 합니다.
-                if (arr[j] > temp) {
-                    arr[j + 1] = arr[j]; // arr[j]를 한 칸 뒤로 밀기
-                } else {
-                    // 현재 원소 temp가 arr[j]보다 크거나 같으면, 비교를 중지합니다.
-                    break;
-                }
+                if(arr[j] > temp) arr[j + 1] = arr[j];          // 뒤로 밀기
+                else break;
             }
 
-            // 적절한 위치(j+1)에 현재 원소(temp)를 삽입합니다.
             arr[j + 1] = temp;
         }
     }
