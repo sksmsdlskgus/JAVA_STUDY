@@ -53,7 +53,7 @@ public class Application4 {
         int pivot = arr[(left + right ) / 2];
         while(true) {
 
-            /* 설명. pivot 위치에 있는 값보다 작은 값을 가르키면 lo 포인터를 증가한다. */
+            /* 설명. pivot 위치에 있는 값보다 작은 값을 가르키면 lo 포인터  증가한다. */
             do {
                 lo++;
             } while(arr[lo] < pivot);
