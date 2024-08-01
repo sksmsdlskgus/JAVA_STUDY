@@ -73,6 +73,7 @@ public class Application1 {
         /* 설명. 입력받은 값을 통해 생성된 list(관련있는 노드들)로부터 정보 확인 */
         for (int node : list[parentNode]) { // 부모가 넘어왔을때 관련 노드를 찾는
             if(!isVisit[node]) { //방문하지 않았다면
+
                 // 이 줄 부터는 던져진 1로 부터 childnode를 의미
                 parent[node] = parentNode; // 방금 넘어온 노드를 부모 노드로 설정
                 dfs(node); // 그 노드를 다시 dfs로 반복 후 끝을 찍으면 위로 continue;
