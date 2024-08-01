@@ -26,7 +26,7 @@ public class Application1 {
 
 
     public static String solution(String input) throws IOException {
-        BufferedReader br = new BufferedReader(toBufferedReader(input));
+        BufferedReader br = toBufferedReader(input);
         sb.delete(0, sb.length());      // 알고리즘과는 무관하나 테스트 코드 환경이라 작성
 
 
@@ -41,7 +41,7 @@ public class Application1 {
         }
 
         /* 설명. N-1 줄의 입력을 처리 */
-        for (int i = 0; i < N; i++) { //둘째 줄부터 N-1개의 줄에 트리 상에서 연결된 두 정점이 주어진다.
+        for (int i = 1; i < N; i++) { //둘째 줄부터 N-1개의 줄에 트리 상에서 연결된 두 정점이 주어진다.
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken()); // 양방향 배열 세팅
             int b = Integer.parseInt(st.nextToken());
@@ -55,7 +55,7 @@ public class Application1 {
 
         /* 설명. dfs이후 parent노드에는 각 노드의 부모 노드가 담겨있다. */
         /* 설명. 2번 노드부터 부모노드들을 하나의 문자열로 반환 */
-        for (int i = 0; i < parent.length; i++) {
+        for (int i = 2; i < parent.length; i++) {
             sb.append(parent[i]);
             sb.append(" ");
 
