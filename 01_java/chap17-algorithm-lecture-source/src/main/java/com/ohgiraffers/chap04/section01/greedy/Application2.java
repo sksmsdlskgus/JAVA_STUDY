@@ -17,7 +17,7 @@ public class Application2 {
         int N = Integer.parseInt(st.nextToken()); // 동전의 종류
         int K = Integer.parseInt(st.nextToken());   // 계산할 금액(가치의 합)
 
-        int[] coin = new int[N];                        //동전의
+        int[] coin = new int[N];                        //동전의 종류들을 담을 배열
         for (int i = 0; i < coin.length; i++) {
             coin[i] = Integer.parseInt(br.readLine());
         }
