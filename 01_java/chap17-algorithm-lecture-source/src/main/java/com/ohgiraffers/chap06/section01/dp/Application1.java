@@ -1,4 +1,4 @@
-package com.ohgiraffers.chap06.dp;
+package com.ohgiraffers.chap06.section01.dp;
 
 import java.io.IOException;
 
