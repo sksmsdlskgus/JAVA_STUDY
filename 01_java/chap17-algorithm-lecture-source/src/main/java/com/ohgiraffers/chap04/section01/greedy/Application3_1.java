@@ -44,6 +44,12 @@ public class Application3_1 {
         /* 설명. time 배열 (정렬 된)에 담긴 회의들을 확인하며 앞선 회의의 종료 다음에 열리는 회의를 판별하며 count증가 */
         for (int i = 0; i < N; i++) {
 
+            /* 설명. 시작시간과 종료시간이 같은 회의는 무조건 열 수 있다. */
+            if(time[i][0] == time[i][1]){
+                max_count++;
+                continue;
+            }
+
             /* 설명. 최소한 앞선 회의가 끝나는 시간과 일치하거나 이후 시작되는 회의인가 */
             if(end <= time[i][0]){
 
