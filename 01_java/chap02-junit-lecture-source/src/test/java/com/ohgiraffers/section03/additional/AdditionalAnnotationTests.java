@@ -1,9 +1,6 @@
 package com.ohgiraffers.section03.additional;
 
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
+import org.junit.jupiter.api.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -25,7 +22,7 @@ public class AdditionalAnnotationTests {
     }
 
     @Test
-    @Order(1)   //작을수록 우선순위가 높다.(먼저 실행된다.)
+    @Order(1)   // 작을수록 우선순위가 높다.(먼저 실행된다.)
     public void testFirst(){}
 
     @Test
@@ -35,6 +32,11 @@ public class AdditionalAnnotationTests {
     @Test
     @Order(2)
     public void testSecond(){}
+
+    @RepeatedTest(10)  // 같은 단위 반복
+    public void testRepeat(){
+
+    }
 
 
 
