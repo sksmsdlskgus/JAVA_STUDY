@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap01-assertions-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap01-literal-and-variable-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap03-method-and-api-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap04-control-flow-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap05-array-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap06-class-and-object-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap07-inheritance-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap08-polymorphisim-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap09-api-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap10-exception-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap11-io-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap12-generics-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap13-collection-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap14-enum-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap15-lambda-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap16-steam-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/chap17-algorithm-lecture-source" />
+    <file type="web" url="file://$PROJECT_DIR$/01_java/test_project" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
