@@ -79,5 +79,10 @@ class JupiterAssertionsTests {
                 () -> validator.checkDivedableNumbers(firstNum, secondNum)
         );
 
+        Assertions.assertAll(
+                () -> Assertions.assertInstanceOf(IllegalArgumentException.class, excpetion,() -> "에외 타입이 일치하지 않음" ),
+                () -> Assertions.assertEquals(expectedErrorMessage,excpetion.getMessage(),() -> "에외 타입이 일치하지 않음" )
+                );
+
     }
 }
