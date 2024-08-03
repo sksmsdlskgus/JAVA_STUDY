@@ -24,11 +24,11 @@ public class Application2 {
 
             /* 설명. 사용자로부터 조회하고자 하는 사원의 사번을 입력해줌 */
             Scanner sc = new Scanner(System.in);
-            System.out.println("사번을 입력하세요: ");
+            System.out.print("사번을 입력하세요: ");
             int empId = sc.nextInt();
 
             /* 설명. 입력받은 사번을 활용한 쿼리 작성 */
-            String query = "SELECT EMP_ID, EMP_NAME FROM EMPLOYEE WHERE EMP_ID = " + empId+ "'" ;
+            String query = "SELECT EMP_ID, EMP_NAME FROM EMPLOYEE WHERE EMP_ID = '" + empId+ "'" ;
             System.out.println("query = " + query);
 
             rset = stmt.executeQuery(query);
