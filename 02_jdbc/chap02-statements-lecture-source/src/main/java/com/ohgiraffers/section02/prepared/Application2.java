@@ -9,6 +9,10 @@ import java.util.Scanner;
 import static com.ohgiraffers.common.JDBCTemplate.close;
 import static com.ohgiraffers.common.JDBCTemplate.getConnection;
 
+
+/* 설명.
+*   PreparedStatment는 Statement와 달리 최초 한번 쿼리를 파싱하고 캐싱하여 다시 재해석 하는 과정(비용)을 생략함으로
+*    인해 불완전하게 작성된 쿼리 실행의 경우는 Statememt보다 빠르다. */
 public class Application2 {
     public static void main(String[] args) {
         Connection con = getConnection();
@@ -21,6 +25,8 @@ public class Application2 {
 
         String entYn = "N";
 
+
+        /* 설명. PreparedStatement는 Statememt와 달리 placeholder(?)를 활용한 하나의 문자열 형태로 쿼리를 작성 */
         String query = "SELECT EMP_ID, EMP_NAME FROM EMPLOYEE WHERE EMP_ID = ? AND ENT_YN = ?";
         //?는 placeholder이라고 하며, 아래의  pstmt.setString(1, empId); 를 받는다는것을 의미함
 
