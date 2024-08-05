@@ -54,7 +54,7 @@ public class Application1 {
             close(pstmt);
 
             /* 설명. connection 객체를 담는 순간 자동 커밋 된다. */
-            //close안에 커밋이 포함 되어있음 
+            //close안에 커밋이 포함 되어있음
             close(con);
         }
 
