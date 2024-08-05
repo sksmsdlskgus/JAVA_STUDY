@@ -7,12 +7,12 @@ import static com.ohgiraffers.common.JDBCTemplate.*;
 import static com.ohgiraffers.common.JDBCTemplate.close;
 
 public class MenuService {
-    public void deleteMenu(Menu deleteMenu) {
+    public void removeMenu(Menu removeMenu) {
 
         Connection con = getConnection();
 
         MenuRepository repository = new MenuRepository();
-        int result = repository.deleteMenu(con, deleteMenu);
+        int result = repository.deleteMenu(con, removeMenu);
 
         if (result > 0) {
             commit(con);

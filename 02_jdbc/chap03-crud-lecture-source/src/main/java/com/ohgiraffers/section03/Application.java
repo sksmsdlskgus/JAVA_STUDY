@@ -9,9 +9,9 @@ public class Application {
         System.out.print("삭제할 메뉴 번호를 입력하세요: ");
         int menuCode = sc.nextInt();
 
-        Menu deleteMenu = new Menu(menuCode);
+        Menu removeMenu = new Menu(menuCode);
         MenuService service = new MenuService();
-        service.deleteMenu(deleteMenu);
+        service.removeMenu(removeMenu);
 
     }
 }

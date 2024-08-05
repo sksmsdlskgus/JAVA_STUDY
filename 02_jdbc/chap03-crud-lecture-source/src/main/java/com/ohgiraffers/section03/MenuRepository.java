@@ -10,7 +10,7 @@ import java.util.Properties;
 import static com.ohgiraffers.common.JDBCTemplate.close;
 
 public class MenuRepository {
-    public int deleteMenu(Connection con, Menu deleteMenu) {
+    public int deleteMenu(Connection con, Menu removeMenu) {
         PreparedStatement pstmt = null;
         int result = 0;
 
@@ -21,7 +21,7 @@ public class MenuRepository {
             String query = prop.getProperty("deleteMenu");
 
             pstmt = con.prepareStatement(query);
-            pstmt.setInt(1, deleteMenu.getMenuCode());
+            pstmt.setInt(1, removeMenu.getMenuCode());
 
             result = pstmt.executeUpdate();
 
