@@ -9,8 +9,10 @@ import static com.ohgiraffers.common.JDBCTemplate.getConnection;
 
 public class Applicaiton1 {
     private static String empId = "200";
-    private static String empName = "' OR 1=1 AND EMP_ID = 200 '";
-
+    private static String empName = "' OR 1=1 AND EMP_ID = '200 ";
+    // 이름을 쓰라고 했는데 이상한걸 써도 출력이 된다 . 왜그럴까 ?
+    // sql injection 이다 이런게
+    // 근데 이걸 PreparedStatement를 사용하여 ? 를 사용한다면 이를 막을 수 있다.
 
     public static void main(String[] args) {
         Connection con = getConnection();
