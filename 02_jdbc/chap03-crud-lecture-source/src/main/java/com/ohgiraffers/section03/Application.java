@@ -1,6 +1,5 @@
 package com.ohgiraffers.section03;
 
-import com.ohgiraffers.section02.update.MenuService;
 
 import java.util.Scanner;
 

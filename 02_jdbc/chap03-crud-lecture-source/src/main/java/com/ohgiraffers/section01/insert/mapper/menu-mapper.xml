@@ -25,7 +25,7 @@
          WHERE MENU_CODE = ?
     </entry>
     <entry key="deleteMenu">
-        DELET
+        DELETE
           FROM TBL_MENU
          WHERE MENU_CODE = ?
     </entry>

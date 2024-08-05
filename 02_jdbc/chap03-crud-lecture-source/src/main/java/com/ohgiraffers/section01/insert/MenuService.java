@@ -12,11 +12,11 @@ public class MenuService {
         Connection con = getConnection(); // 커넥션 객체 생성
 
         MenuRepository repository = new MenuRepository();
-        int resilt = repository.insertMenu(con, registMenu);
+        int result = repository.insertMenu(con, registMenu);
 
         /* 설명. JDBCTemplate에 commit, rollback 메소드도 추가
         *   줄 수를 줄임으로 써 가독성과 깔끔함~*/
-        if(resilt > 0) {
+        if(result > 0) {
             commit(con);
         }else {
             rollback(con);

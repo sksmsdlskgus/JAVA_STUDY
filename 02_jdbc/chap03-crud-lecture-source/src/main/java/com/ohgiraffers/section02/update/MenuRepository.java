@@ -25,6 +25,9 @@ public class MenuRepository {
             pstmt.setInt(2, modifyMenu.getMenuPrice());
             pstmt.setInt(3, modifyMenu.getMenuCode());
 
+            result = pstmt.executeUpdate();
+
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (SQLException e) {

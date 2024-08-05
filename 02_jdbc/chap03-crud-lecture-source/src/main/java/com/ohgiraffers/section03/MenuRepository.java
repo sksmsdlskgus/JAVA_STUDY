@@ -10,7 +10,7 @@ import java.util.Properties;
 import static com.ohgiraffers.common.JDBCTemplate.close;
 
 public class MenuRepository {
-    public int updateMenu(Connection con, Menu modifyMenu) {
+    public int deleteMenu(Connection con, Menu deleteMenu) {
         PreparedStatement pstmt = null;
         int result = 0;
 
@@ -18,12 +18,13 @@ public class MenuRepository {
 
         try {
             prop.loadFromXML(new FileInputStream("src/main/java/com/ohgiraffers/section01/insert/mapper/menu-mapper.xml"));
-            String query = prop.getProperty("updateMenu");
+            String query = prop.getProperty("deleteMenu");
 
             pstmt = con.prepareStatement(query);
-            pstmt.setString(1,modifyMenu.getMenuName());
-            pstmt.setInt(2, modifyMenu.getMenuPrice());
-            pstmt.setInt(3, modifyMenu.getMenuCode());
+            pstmt.setInt(1, deleteMenu.getMenuCode());
+
+            result = pstmt.executeUpdate();
+
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -35,4 +36,6 @@ public class MenuRepository {
 
         return result;
     }
+
 }
+
