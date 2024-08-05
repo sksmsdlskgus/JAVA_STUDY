@@ -19,6 +19,8 @@ public class JDBCTemplate {
             Class.forName(driver);
             con = DriverManager.getConnection(url, user, password);
 
+            /* 설명. MDL 실행 시 자동 커밋이 아닌 수동 커밋을 하겠다는 의미(수동 커밋/롤백) */
+            con.setAutoCommit(false);
 
         } catch (Exception e) {
             throw new RuntimeException(e);
