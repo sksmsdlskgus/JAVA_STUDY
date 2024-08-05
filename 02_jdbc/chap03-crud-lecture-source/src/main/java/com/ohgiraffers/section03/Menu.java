@@ -1,4 +1,4 @@
-package com.ohgiraffers.section02.update;
+package com.ohgiraffers.section03;
 
 public class Menu {
     private  int menuCode;
@@ -22,6 +22,10 @@ public class Menu {
         this.menuCode = menuCode;
         this.menuName = menuName;
         this.menuPrice = menuPrice;
+    }
+
+    public Menu(int menuCode) {
+        this.menuCode = menuCode;
     }
 
     public int getMenuCode() {

@@ -1,4 +1,4 @@
-package com.ohgiraffers.section02.update;
+package com.ohgiraffers.section03;
 
 import java.io.FileInputStream;
 import java.io.IOException;
