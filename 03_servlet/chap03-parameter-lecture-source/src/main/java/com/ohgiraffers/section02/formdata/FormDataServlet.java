@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Enumeration;
 
-@WebServlet("/fromdata")
+@WebServlet("/formdata")
 public class FormDataServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -23,9 +23,8 @@ public class FormDataServlet extends HttpServlet {
 
         /* 설명. 요청으로 사용자가 넘겨준 모든 parameter들의 키 값 추출 */
         Enumeration<String> names = req.getParameterNames();
-        while (names.hasMoreElements()) {
+        while(names.hasMoreElements()) {
             System.out.println(names.nextElement());
         }
-
     }
 }
