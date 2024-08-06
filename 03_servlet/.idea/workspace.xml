@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb5b925c-6a7b-4e2a-a0f4-71e88d31d5d5" name="Changes" comment="" />
+    <list default="true" id="cb5b925c-6a7b-4e2a-a0f4-71e88d31d5d5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/03_servlet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/03_servlet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,9 +13,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2kEHNB9sfppKo4K3mC9p7OcwiGO" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -21,8 +24,9 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/lecture/02_jdbc/chap03-crud-lecture-source",
+    "last_opened_file_path": "C:/lecture/03_servlet/chap-01-life-cycle-lecture-source",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -44,6 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1722841773652</updated>
       <workItem from="1722841774712" duration="20000" />
+      <workItem from="1722902508078" duration="36000" />
     </task>
     <servers />
   </component>
