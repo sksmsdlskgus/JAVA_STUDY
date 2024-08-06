@@ -8,6 +8,7 @@
 
 <h1 align="center">라이프 사이클 테스트</h1>
 <a href="xml-lifecycle">라이프 사이클 테스트(xml)</a>
+<a href="annotation-lifecycle">라이프 사이클 테스트(annotation)</a>
 
 </body>
 </html>

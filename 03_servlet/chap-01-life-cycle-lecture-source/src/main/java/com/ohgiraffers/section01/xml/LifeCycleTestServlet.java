@@ -32,7 +32,7 @@ public class LifeCycleTestServlet extends HttpServlet {
         System.out.println("실제로는 요청에 따라 doGet() 또는 doPost()가 실행됨!!");
     }// /xml-lifecycle 링크 클릭 시, 새로고침 시
 
-    
+
     /* 설명. 컨테이너가 종료될 때 호출하는 메소드이며 주로 자원을 반납하는 용도로 사용된다.  */
     @Override
     public void destroy() {
