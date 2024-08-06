@@ -8,6 +8,7 @@
 <h1 align="center">Response</h1>
 <ul>
     <li><a href="response">응답 확인하기</a></li>
+    <li><a href="header">응답 헤더 확인하기</a></li>
 </ul>
 
 
