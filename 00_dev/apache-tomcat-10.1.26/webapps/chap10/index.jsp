@@ -23,6 +23,7 @@
     </tr>
   </table>
 </form>
-
+<br>
+<a href="delete">세션 데이터 지우기(로그아웃)</a>
 </body>
 </html>
