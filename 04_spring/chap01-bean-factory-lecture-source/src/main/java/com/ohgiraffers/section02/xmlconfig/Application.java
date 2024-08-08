@@ -1,4 +1,4 @@
-package com.ohgiraffers.section01.xmlconfig;
+package com.ohgiraffers.section02.xmlconfig;
 
 import com.ohgiraffers.common.MemberDTO;
 import org.springframework.context.ApplicationContext;
