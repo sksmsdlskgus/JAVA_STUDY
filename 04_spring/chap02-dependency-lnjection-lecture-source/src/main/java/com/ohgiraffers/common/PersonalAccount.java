@@ -55,6 +55,6 @@ public class PersonalAccount implements Account {
             str = "잔액이 부족합니다. 잔액을 확인해주세요";
         }
 
-        return "";
+        return str;
     }
 }
