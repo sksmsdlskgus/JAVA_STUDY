@@ -15,10 +15,8 @@ public class BookService {
 
     @Autowired
     BookDAO bookDAO;
-
-    // Application에서 컨테이너를 만드는데 그 범ㅇ주에서 BookSDAOImpl과 BookService가 콩으로 만들어야 한대
-    // BookService를 콩으로 만들려고 했는데 bookDAO에 콩을 담으래 근데 콩을 아직 안만들었는데 어케 담노
-    // 뭔 개소리냐 ./...?
+    // 위에꺼 = 필드 주입
+    // private BookDAO bookDAO;로 해도 작동된다. 다른 패키지에서 뚫고 들어오는거라 지양함
     public BookService() {
 
     }
