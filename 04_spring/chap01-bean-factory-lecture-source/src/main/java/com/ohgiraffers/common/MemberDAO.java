@@ -16,7 +16,7 @@ import java.util.Map;
 *   1. @Component 계열로 스프링 컨테이너(IOC컨테이너)가 bean으로 등록하는 클래스에 추가하는 어노테이션이다.
 *   2. DAO(또는 Repository) 계층에 MVC 구조에 맞춰 구분하기 위해 추가하는 어노테이션이다.
 *      (추가적으로는 DB에서 발생한 에러를 자바의 예외타입으로 바꿔주는 부가 기능이 있다. */
-@Repository
+@Repository("na")
 //@Component  /// @Component라고 해도 bean으로는 관리 될 수 있다.
 public class MemberDAO {
     private final Map<Integer, MemberDTO> memberMap ;
