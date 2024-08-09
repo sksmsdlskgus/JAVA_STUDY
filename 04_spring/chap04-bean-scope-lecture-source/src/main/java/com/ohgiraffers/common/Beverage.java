@@ -1,7 +1,7 @@
 package com.ohgiraffers.common;
 
 public class Beverage  extends Product{
-    private int capacity;      //용량
+    private int capacity;       // 용량
 
     public Beverage() {
     }
@@ -15,6 +15,6 @@ public class Beverage  extends Product{
     public String toString() {
         return "Beverage{" +
                 "capacity=" + capacity +
-                '}' + super.toString();
+                "} " + super.toString();
     }
 }

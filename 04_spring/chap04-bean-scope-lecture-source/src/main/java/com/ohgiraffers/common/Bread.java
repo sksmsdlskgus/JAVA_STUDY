@@ -3,21 +3,20 @@ package com.ohgiraffers.common;
 import java.util.Date;
 
 public class Bread extends Product{
-    private java.util.Date bakeDate;      //구운 시간
+    private java.util.Date bakedDate;   // 구운 시간
 
     public Bread() {
-
     }
 
-    public Bread(String name, int price, Date bakeDate) {
+    public Bread(String name, int price, Date bakedDate) {
         super(name, price);
-        this.bakeDate = bakeDate;
+        this.bakedDate = bakedDate;
     }
 
     @Override
     public String toString() {
         return "Bread{" +
-                "bakeDate=" + bakeDate +
-                '}' + super.toString();
+                "bakedDate=" + bakedDate +
+                "} " + super.toString();
     }
 }
