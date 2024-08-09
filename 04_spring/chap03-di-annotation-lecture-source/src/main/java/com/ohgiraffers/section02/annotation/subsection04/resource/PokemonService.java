@@ -15,7 +15,7 @@ public class PokemonService {
 //    private Pokemon pokemon;
 
     /* 설명. List<Pokemon>으로 처리 시 */
-    @Resource
+    @Resource  // DI로 해석하자
     private List<Pokemon> pokemonList;
 
     public void pokemonAttack() {
