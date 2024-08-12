@@ -1,0 +1,26 @@
+package com.ohgiraffers.chap02;
+
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.awt.*;
+
+@Controller
+public class MethodMappingTestController {
+
+    /* 설명. 핸들러 메소드(어노테이션을 활용해서 요청 방식 및 경로에 따라 각각 메소드가 작성된다.) */
+//    @RequestMapping("/menu/regist")
+    // GET 요청뿐 아니라 다른 방식의 요청도 처리됨 (경로만 같으면)
+    @RequestMapping(value = "/menu/regist", method = RequestMethod.GET)
+    // GET요청만 가능
+    public String registRegist(Model model) {
+        System.out.println("/menu/regist 경로의 GET 요청 받아오기");
+
+        model.addAttribute("message", "신규 메뉴등록 핸들러 메소드 호출하고 응답한 페이지");
+
+        return "mappingResult";
+    }
+}
