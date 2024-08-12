@@ -14,11 +14,10 @@ public class MemberDAO {
         memberList = new ArrayList<>();
         memberList.add(new MemberDTO(1L,"이나짱"));
         memberList.add(new MemberDTO(2L,"현나이"));
-        
+
     }
 
-    public List<MemberDTO> selectMembers() {
-        return null;
+    public List<MemberDTO> selectAllMembers() {
+        return memberList;
     }
-
 }
