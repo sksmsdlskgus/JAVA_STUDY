@@ -1,7 +1,6 @@
 package com.ohgiraffers.section02.reflection;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.*;
 
 public class Application {
     public static void main(String[] args) {
@@ -46,6 +45,51 @@ public class Application {
             System.out.println("modifiers = " + Modifier.toString(field.getModifiers())
                     + ", type = " + field.getType()
                     + ", name = " + field.getName());
+        }
+
+        /* 설명. 3. 생성자 정보 추출 */
+        Constructor[] constructors = Account.class.getConstructors();
+        for (Constructor constructor : constructors) {
+            System.out.println("name: " + constructor.getName());
+
+            Class[] params = constructor.getParameterTypes();
+            for (Class param : params) {
+                System.out.println("paramType: " + param.getTypeName());
+            }
+        }
+
+        try {
+
+            Account acc = (Account) constructors[0].newInstance("20", "1012-3203023-3333", "1234", 1099);
+            System.out.println(acc.getBalance());
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        } catch (InvocationTargetException e) {
+            throw new RuntimeException(e);
+        }
+
+        /* 설명. 4.메소드 정보 추출 */
+        Method[] methods = Account.class.getMethods();
+        Method getBalancethod = null;
+        for (Method method : methods) {
+            System.out.println(Modifier.toString(method.getModifiers()) + " "
+                    + method.getReturnType().getSimpleName()
+                    + " " + method.getName());
+            if ("getBalance".equals(method.getName())) {
+                getBalancethod = method;
+            }
+        }
+        try {
+
+            System.out.println(getBalancethod.invoke(((Account) constructors[2].newInstance())));
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        } catch (InvocationTargetException e) {
+            throw new RuntimeException(e);
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
         }
     }
 }
