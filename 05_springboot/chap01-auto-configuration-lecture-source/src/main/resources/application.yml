@@ -5,4 +5,5 @@
 test:
   value: def
   age: 10
-
+server:
+  port: 8888
