@@ -20,4 +20,8 @@ public class MemberDAO {
     public List<MemberDTO> selectAllMembers() {
         return memberList;
     }
+
+    public MemberDTO selectMemberBy(int index) {
+        return memberList.get(index);
+    }
 }

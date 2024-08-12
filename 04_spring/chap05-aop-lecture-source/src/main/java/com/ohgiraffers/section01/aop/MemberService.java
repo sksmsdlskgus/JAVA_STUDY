@@ -20,4 +20,9 @@ public class MemberService {
         System.out.println("target -> findAllMembers 실행"); // 서비스계층을 지나서 간다는것을 어필
         return memberDAO.selectAllMembers();
     }
+
+    public MemberDTO findMemberBy(int index) {
+        System.out.println("target -> findMemberBy 실행");
+        return memberDAO.selectMemberBy(index);
+    }
 }

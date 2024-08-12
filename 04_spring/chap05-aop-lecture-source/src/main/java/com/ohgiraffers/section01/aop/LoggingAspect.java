@@ -1,10 +1,10 @@
 package com.ohgiraffers.section01.aop;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Aspect
 @Component
@@ -37,10 +37,11 @@ public class LoggingAspect {
 
     @Pointcut("execution(* com.ohgiraffers.section01.aop.*Service.*(..))")
     public void logPointcut() {}
-    // 저 범위가 너무 길어서 이렇게 메소드로 따로 뺄 수 있다 
+    // 저 범위가 너무 길어서 이렇게 메소드로 따로 뺄 수 있다
 
 
 
+    /* 설명. 1. Before Advice */
 //    @Before("execution(* com.ohgiraffers.section01.aop.*Service.*(..))")
     @Before("LoggingAspect.logPointcut()")
     public void logBefore(JoinPoint joinPoint) {
@@ -55,4 +56,34 @@ public class LoggingAspect {
             // 있었다면 배열 형태로 몇번째에 나타난다.
         }
     }
+
+    /* 설명. 2. After Advice */
+    @After("LoggingAspect.logPointcut()")
+    public void logAfter(JoinPoint joinPoint) {
+        System.out.println("After joinPoint.getTarget(): " + joinPoint.getTarget());
+        System.out.println("After joinPoint.getSignature(): " + joinPoint.getSignature());
+        if(joinPoint.getArgs().length > 0) {        // 매개변수가 하나라도 있다면
+            System.out.println("After joinPoint.getArgs()[0]: " + joinPoint.getArgs()[0]);
+        }
+    }
+
+    /* 설명. 3. AfterReturning Advice */
+    @AfterReturning(pointcut="logPointcut()", returning = "result")
+    public void logAfterReturning(JoinPoint joinPoint, Object result) {
+        System.out.println("After Returning result: " + result);
+
+        if (result != null && result instanceof List) {
+            ((List<MemberDTO>) result).add(new MemberDTO(3L,"반환 값 가공"));
+        }
+    }
+
+    /* 설명. 3. AfterThrowing Advice */
+    @AfterThrowing(pointcut="logPointcut()", throwing = "exception")
+    public void logAfterThrowing( Throwable exception ) {
+        System.out.println("After Throwing exception: " + exception);
+
+    }
+
+
+
 }

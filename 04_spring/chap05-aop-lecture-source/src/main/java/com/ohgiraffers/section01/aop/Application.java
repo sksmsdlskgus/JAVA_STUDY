@@ -10,9 +10,15 @@ public class Application {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.ohgiraffers.section01.aop");
 
         MemberService memberService = context.getBean("memberService", MemberService.class);
-        System.out.println("========= select all members ========");
 
+        /* 설명. 1. 회원 전체 조회(매개변수 없는 타겟 메소드인 경우) */
+        System.out.println("========= select all members ========");
         List<MemberDTO> members = memberService.findMembers();
         members.forEach(System.out::println); // dao에서 만든 콩 두개가 출력됨
+
+        /* 설명. 2. 회원 한명 조회(매개변수 한개 있는 타겟 메소드인 경우) */
+        System.out.println("========= select one members ========");
+        System.out.println(memberService.findMemberBy(1));
+
     }
 }
