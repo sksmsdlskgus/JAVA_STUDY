@@ -12,10 +12,15 @@ public class SpringConfiguration {
     @Value("${username}")
     public String username;
 
+    @Value("${test.age}")
+    public int age;
+
+
     @Bean
     public Object propertyReadTest(){
         System.out.println("value = " + value);
         System.out.println("username = " + username);
+        System.out.println("age = " + age);
 
         return new Object();
     }
