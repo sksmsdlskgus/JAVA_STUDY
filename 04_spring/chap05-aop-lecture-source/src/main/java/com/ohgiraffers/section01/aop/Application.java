@@ -13,5 +13,6 @@ public class Application {
         System.out.println("========= select all members ========");
 
         List<MemberDTO> members = memberService.findMembers();
+        members.forEach(System.out::println); // dao에서 만든 콩 두개가 출력됨
     }
 }

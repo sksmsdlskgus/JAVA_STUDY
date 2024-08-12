@@ -17,7 +17,7 @@ public class MemberService {
     }
 
     public List<MemberDTO> findMembers() {
-        System.out.println("target -> findAllMembers 실행");
+        System.out.println("target -> findAllMembers 실행"); // 서비스계층을 지나서 간다는것을 어필
         return memberDAO.selectAllMembers();
     }
 }

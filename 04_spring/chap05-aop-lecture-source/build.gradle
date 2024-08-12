@@ -24,6 +24,12 @@ dependencies {
 
     // https://mvnrepository.com/artifact/jakarta.inject/jakarta.inject-api
     implementation ('jakarta.inject:jakarta.inject-api:2.0.1')
+
+    // https://mvnrepository.com/artifact/one.gfw/aspectjweaver --> aop
+    implementation 'one.gfw:aspectjweaver:1.9.19'
+
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjrt --> aop
+    implementation("org.aspectj:aspectjrt:1.9.19")
 }
 
 test {
