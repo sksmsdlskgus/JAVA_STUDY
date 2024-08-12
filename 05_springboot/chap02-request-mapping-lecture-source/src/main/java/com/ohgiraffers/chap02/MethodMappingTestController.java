@@ -21,6 +21,13 @@ public class MethodMappingTestController {
 
         model.addAttribute("message", "신규 메뉴등록 핸들러 메소드 호출하고 응답한 페이지");
 
+        /* 설명. 핸들러 메소드에서 반환한는 String은 templates 폴더에 있는 view (html파일)의 이름이다. */
         return "mappingResult";
     }
+    @RequestMapping("/menu/modify")
+    public String modifyRegist(Model model) {
+        model.addAttribute("message","POST 방식의 메뉴 수정용 핸들러 메소드 호출함...");
+        return "mappingResult";
+    }
+
 }
