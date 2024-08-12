@@ -1,6 +1,7 @@
 package com.ohgiraffers.section01.aop;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
@@ -77,11 +78,20 @@ public class LoggingAspect {
         }
     }
 
-    /* 설명. 3. AfterThrowing Advice */
+    /* 설명. 3. AfterThrowing Advice */ // 예외처리
     @AfterThrowing(pointcut="logPointcut()", throwing = "exception")
     public void logAfterThrowing( Throwable exception ) {
         System.out.println("After Throwing exception: " + exception);
 
+    }
+
+    /* 설명. 5. Around Advice */
+    @Around("logPointcut()")
+    public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable  {
+        System.out.println("Around Before: " + joinPoint.getSignature().getName());
+        Object result = joinPoint.proceed(); // 타겟 메소드 동작
+        System.out.println("Around After: " + joinPoint.getSignature().getName());
+        return result;
     }
 
 

@@ -20,5 +20,8 @@ public class Application {
         System.out.println("========= select one members ========");
         System.out.println(memberService.findMemberBy(1));
 
+        /* 설명. 3. 3번 인덱스 조회로 예외 발생시켜보기(AfterThrowing Advice동작) */
+//        memberService.findMemberBy(3);
+
     }
 }
