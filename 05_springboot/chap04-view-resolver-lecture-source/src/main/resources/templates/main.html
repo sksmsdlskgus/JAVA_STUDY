@@ -36,5 +36,15 @@
     console.log(message2);
 </script>
 
+<h3>ModelAndView로 redirect하면서 flashAttribute 추가하기</h3>
+<button onclick="location.href='modelandview-redirect-attr'">ModelAndView로 뷰 이름 반환하여 리다이렉트 & flash attr 사용하기</button>
+<script>
+    const flashMessage2= `[[${flashMessage2}]]`;
+    // console.log(flashMessage2);
+    if(flashMessage2){
+        alert(flashMessage2);
+    }
+</script>
+
 </body>
 </html>
