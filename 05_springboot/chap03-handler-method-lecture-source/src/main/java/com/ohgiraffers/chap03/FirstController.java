@@ -1,9 +1,11 @@
 package com.ohgiraffers.chap03;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 
 import java.util.Map;
 
@@ -11,6 +13,7 @@ import java.util.Map;
 /* 설명. 현재의 Controller 클래스에 작성할 핸들러 메소드들이 모두 /first/***의 요청을 받게 될 것이다.(보통은 도메인) */
 @Controller
 @RequestMapping("/first")
+@SessionAttributes("id")
 public class FirstController {
 
     /* 설명. 반환형이 void인 핸들러 메소드는 요청 경로 자체가 view의 경로 및 이름을 반환한 것으로 바로 해석된다. */
@@ -92,4 +95,47 @@ public class FirstController {
         System.out.println("menu = " + menu);
         return "first/searchResult";
     }
+
+    @GetMapping("login1")
+    public void login() {
+    }
+
+    @PostMapping("login1")
+    public String sessionTest1(HttpSession session, @RequestParam String id) {      //
+        session.setAttribute("id", id);
+        return "first/loginResult";
+    }
+
+    @GetMapping("logout1")
+    public String logoutTest1(HttpSession session) {
+        session.invalidate();
+
+        return "first/loginResult";
+    }
+
+    @PostMapping("login2")
+    public String sessionTest2(Model model, @RequestParam String id) {      // spring전용 requset 공간을 model이라고 생각하셈
+        model.addAttribute("id", id);
+        return "first/loginResult";
+    }
+
+    /* 설명. @SessionAttributes 방식으로 session에 담긴 값은 SessionStatus에서 제공하는 setComplete로 만료 시켜야 한다. */
+    @GetMapping("logout2")
+    public String logoutTest2(SessionStatus sessionStatus) { // @SessionAttributes 방식으로 session 만료를 시킬 땐 SessionStatus 타입의 setComplete를 사용해야 한다.
+        sessionStatus.setComplete();
+        return "first/loginResult";
+    }
+
+    @GetMapping("body")
+    public void body() {
+    }
+
+    @PostMapping("body")
+    public void body(@RequestBody String body, @RequestHeader("content-type") String contentType, @CookieValue(value = "JSESSIONID") String sessionId) {
+        System.out.println("body = " + body);
+        System.out.println("contentType = " + contentType);
+        System.out.println("sessionId = " + sessionId);
+
+    }
+
 }
