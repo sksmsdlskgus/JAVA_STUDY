@@ -1,4 +1,4 @@
-package com.ohgiraffers.chap03.config;
+package com.ohgiraffers.chap03;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
