@@ -6,6 +6,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Map;
 
 
 /* 설명. 현재의 Controller 클래스에 작성할 핸들러 메소드들이 모두 /first/***의 요청을 받게 될 것이다.(보통은 도메인) */
@@ -44,4 +47,32 @@ public class FirstController {
     public void modify(){
     }
 
+
+    /* 설명.
+    *   @RequestParam의 속성들
+    *   1. defaultValue:사용자의 입력값이 없거나("") 아니면 request의 parameter 키값과 일치하지 않는
+    *                    매개변수일 뗴 사용하고 싶은 값을 default 값으로 설정할 수 있다.
+    *    2. name : request parameter의 키값과 다른 매개변수 명을 사용하고 싶을 떄 request parameter의 키 값을 작성한다.
+    *     (@RequestParam 어노테이션은 생략 가능) */
+
+    @PostMapping("modify")
+    public String modifiMenu(Model model,
+                           @RequestParam (defaultValue = "디폴트", name= "name") String modifyName,
+                           @RequestParam (defaultValue = "0") int modifyPrice){
+        String message = modifyName + "메뉴의 가격을" + modifyPrice + "로 변경하였습니다.";
+        model.addAttribute("message", message);
+
+        return "first/messagePrinter";
+    }
+
+    @PostMapping("modify2")
+    public String modifyMenu(Model model, @RequestParam Map<String,String> parameter){
+        String modifyName = parameter.get("name2");
+        int modifyPrice = Integer.parseInt(parameter.get("modifyPrice2"));
+
+        String message = modifyName + "메뉴의 가격을" + modifyPrice + "로 변경하였습니다.";
+        model.addAttribute("message", message);
+
+        return "first/messagePrinter";
+    }
 }
