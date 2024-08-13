@@ -11,6 +11,12 @@ import java.util.Map;
 
 
 /* 설명. 현재의 Controller 클래스에 작성할 핸들러 메소드들이 모두 /first/***의 요청을 받게 될 것이다.(보통은 도메인) */
+//view에서 데이터를 받아오는 방법
+//HttpServletRequest.getParameter
+//@RequestParam
+//@RequestParam<Map>
+//DTO 변수
+//@ModelAttribute
 @Controller
 @RequestMapping("/first")
 @SessionAttributes("id")
