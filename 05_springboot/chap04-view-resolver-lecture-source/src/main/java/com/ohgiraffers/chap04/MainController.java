@@ -12,7 +12,7 @@ public class MainController {
     *   접미사(suffex): .html
     *   핸들러 메소드가 반환하는 String 값 앞 뒤에 접두사 및 접미사를 붙여 view를 찾게 된다.
     * */
-    @RequestMapping(value = {"/","/main","redirect:/"})
+    @RequestMapping(value = {"/","/main"})
     public String main() {
         return "main";
     }
