@@ -7,16 +7,20 @@ import java.util.List;
 import static com.ohgiraffers.section01.xmlconfig.Template.getSqlSession;
 
 public class MenuService {
+
     private final MenuDAO menuDAO;
 
-    public MenuService(){
+    public MenuService() {
         menuDAO = new MenuDAO();
     }
 
-    public static List<MenuDTO> findAllMenus() {
+    public List<MenuDTO> findAllMenus() {
         SqlSession sqlSession = getSqlSession();
 
+        List<MenuDTO> menuList = menuDAO.selectAllMenus(sqlSession);
 
-        return null;
+        sqlSession.close();
+
+        return menuList;
     }
 }
