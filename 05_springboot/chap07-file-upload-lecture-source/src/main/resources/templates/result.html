@@ -8,8 +8,18 @@
 <!--<img src="uploadFiles/img/single/a7c6d8af27314bcba926005e8e3c8b81.jpg" >-->
 
 <h1 th:text="${message}"></h1>
+
+<div th:if="${img != null}">
 <img th:src="${img}" alt="고양이">
 <p th:text="${singleFileDescription}"></p>
+</div>
+
+<div th:else>
+<th:block th:each="img: ${imgs}">
+    <img th:src="${img}" width="150" height="150">
+</th:block>
+<p th:text="${multiFileDescription}"></p>
+</div>
 
 </body>
 </html>
