@@ -21,6 +21,7 @@ public class Application {
 
             switch (no) {
                 case 1:
+                    menuController.findAllMenus();
                     break;
                 case 9:
                     System.out.println("프로그램을 종료하겠습니다.");
