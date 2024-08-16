@@ -41,6 +41,9 @@ public class Application {
                 case 1:
                     menuService.findMenuByPrice(inputPrice());
                     break;
+                case 2:
+                    menuService.searchMenu(inputSearchCriteria());
+                    break;
                 case 9: return;
             }
         } while(true);
@@ -52,4 +55,16 @@ public class Application {
 
         return sc.nextInt();
     }
+
+
+    private static SearchCriteria inputSearchCriteria() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("검색 기준을 입력해 주세요(name or category): ");
+        String condition = sc.nextLine();
+        System.out.print("검색어를 입력해 주세요: ");
+        String value = sc.nextLine();
+
+        return new SearchCriteria(condition,value);
+    }
+
 }
