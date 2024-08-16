@@ -1,10 +1,10 @@
-package com.ohgiraffers.section2;
+package com.ohgiraffers.section03.remix;
 
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
 
-import static com.ohgiraffers.section2.Template.getSqlSession;
+import static com.ohgiraffers.section03.remix.Template.getSqlSession;
 
 
 public class MenuService {

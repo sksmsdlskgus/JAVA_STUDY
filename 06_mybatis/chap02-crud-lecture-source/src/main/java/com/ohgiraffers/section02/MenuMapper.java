@@ -1,4 +1,4 @@
-package com.ohgiraffers.section2;
+package com.ohgiraffers.section02;
 
 import org.apache.ibatis.annotations.*;
 

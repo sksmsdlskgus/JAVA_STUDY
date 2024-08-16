@@ -1,4 +1,4 @@
-package com.ohgiraffers.section2;
+package com.ohgiraffers.section02;
 
 public class MenuDTO {
     private int menuCode;

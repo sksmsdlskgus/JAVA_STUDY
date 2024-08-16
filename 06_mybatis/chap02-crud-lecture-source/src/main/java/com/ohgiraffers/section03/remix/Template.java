@@ -1,4 +1,4 @@
-package com.ohgiraffers.section2;
+package com.ohgiraffers.section03.remix;
 
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
 import org.apache.ibatis.mapping.Environment;
