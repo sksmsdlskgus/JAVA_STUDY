@@ -1,11 +1,11 @@
 package com.ohgiraffers.section2;
 
-import com.ohgiraffers.section01.xmlconfig.MenuDAO;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
 
-import static com.ohgiraffers.section01.xmlconfig.Template.getSqlSession;
+import static com.ohgiraffers.section2.Template.getSqlSession;
+
 
 public class MenuService {
 
@@ -15,7 +15,7 @@ public class MenuService {
         SqlSession sqlSession = getSqlSession();
 
         menuMapper = sqlSession.getMapper(MenuMapper.class);
-        ;// 의존성 주입 방식
+        ;// 의존성 주입 방식 !!!!!!!!
         List<MenuDTO> menuList = menuMapper.selectAllMenus();
         sqlSession.close();
 
@@ -35,7 +35,10 @@ public class MenuService {
 
     public boolean regisMenu(MenuDTO menu) {
         SqlSession sqlSession = getSqlSession();
-        int result = menuDAO.insertMenu(sqlSession, menu);
+
+
+        menuMapper = sqlSession.getMapper(MenuMapper.class);
+        int result = menuMapper.insertMenu(menu);
 
         if (result > 0) {
             sqlSession.commit();
@@ -50,7 +53,9 @@ public class MenuService {
 
     public boolean updateMenu(MenuDTO menu) {
         SqlSession sqlSession = getSqlSession();
-        int result = menuDAO.updateMenu(sqlSession, menu);
+
+        menuMapper = sqlSession.getMapper(MenuMapper.class);
+        int result = menuMapper.updateMenu(menu);
 
         if (result > 0) {
             sqlSession.commit();
@@ -65,7 +70,9 @@ public class MenuService {
 
     public boolean remove(int menuCode) {
         SqlSession sqlSession = getSqlSession();
-        int result = menuDAO.deleteMenu(sqlSession, menuCode);
+
+        menuMapper = sqlSession.getMapper(MenuMapper.class);
+        int result = menuMapper.deleteMenu(menuCode);
 
         if (result > 0) {
             sqlSession.commit();

@@ -29,8 +29,7 @@ public class Template {
 
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
 
-            return sqlSessionFactory.openSession(false);
 
-        }
+        } return sqlSessionFactory.openSession(false);
     }
 }
