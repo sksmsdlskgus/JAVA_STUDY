@@ -11,7 +11,7 @@ import java.util.Scanner;
 *             javaconfig 방식: 쿼리가 어노테이션에 깔끔하게 정리되기 힘들어 가독성이 떨어진다.(메소드 구분도 쉽지 않음)
 *   (namespace와 mapper용 인터페이스를 맞춰주고 쿼리는 xml로 따로 분리하는 것으로 해결
 *
-* 
+*
 *   필기.
 *     remix 방식을 적용하기 위한 규칙
 *     1. mapper용 인터페이스와 mapper용 xml 파일 이름 동일
