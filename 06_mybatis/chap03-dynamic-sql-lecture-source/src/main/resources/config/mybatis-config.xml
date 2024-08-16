@@ -16,4 +16,10 @@
             </dataSource>
         </environment>
     </environments>
+
+<!--    mapper가 인터페이스일 때는 package로 자동 해당 범위 매퍼 등록이 가능하다.-->
+    <mappers>
+        <package name="com.ohgiraffers.section01.xml"/>
+
+    </mappers>
 </configuration>

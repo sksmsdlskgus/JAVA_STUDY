@@ -12,8 +12,11 @@
             , A.ORDERABLE_STATUS
            FROM TBL_MENU A
         WHERE A.ORDERABLE_STATUS = 'Y'
-      <if test="price gte 0 and price lte 10000"> <!--  <= >= 이상의 의미-->
+<!--        if문의 동적쿼리 사용-->
+        <if test="price gte 0 and price lte 10000"> <!--  <= >= 이상의 의미-->
+            <![CDATA[
             AND A.MENU_PRICE < #{ price }
+            ]]>
         </if>
         <if test="price gte 10000 and price lte 20000">
             AND A.MENU_PRICE BETWEEN 10000 AND 20000

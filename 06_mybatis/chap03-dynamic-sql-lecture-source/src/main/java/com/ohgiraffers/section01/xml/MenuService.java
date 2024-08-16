@@ -10,6 +10,7 @@ public class MenuService {
         MenuMapper mapper = sqlSession.getMapper(MenuMapper.class);
 
         List<MenuDTO> menus = mapper.selectMenuByPrice(price);
+        menus.forEach(System.out::println);
 
     }
 }
