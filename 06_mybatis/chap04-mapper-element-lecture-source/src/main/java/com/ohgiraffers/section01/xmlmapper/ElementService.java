@@ -37,10 +37,8 @@ public class ElementService {
         SqlSession sqlSession = getSqlSession();
         ElementMapper mapper = sqlSession.getMapper(ElementMapper.class);
 
-        List<MenuAndCategoryDTO> menus = mapper.selectResultMapCollectionTest();
-        menus.forEach(System.out::println);
-
-
+        List<CategoryAndMenuDTO> categories = mapper.selectResultMapCollectionTest();
+        categories.forEach(System.out::println);
 
         sqlSession.close();
     }
