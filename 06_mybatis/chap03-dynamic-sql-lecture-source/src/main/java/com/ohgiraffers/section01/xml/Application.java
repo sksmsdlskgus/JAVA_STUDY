@@ -121,20 +121,43 @@ public class Application {
                 case 2:
                     menuService.searchMenuByNameOrCategory(inputSearchCriteriaMap());
                     break;
+                case 3:
+                    menuService.modifyMenu(inputChangeInfo());
+                    break;
                 case 9:
                     return;
             }
         } while (true);
     }
 
-
-    /* 설명. 이번엔  SearchCriteria 대신 Map으로 진행  */
-    private static Map<String,Object> inputSearchCriteriaMap() {
+    private static Map<String, Object> inputChangeInfo() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("검색 조건을 입력하세요(category or nameboth or name): ");
+
+        System.out.print("변경할 메뉴 코드를 입력하세요: ");
+        int menuCode = sc.nextInt();            // nextInt()는 엔터로 건너뛸 수 없다.(한계...)
+        System.out.print("변경할 메뉴 이름을 입력하세요: ");
+        sc.nextLine();
+        String menuName = sc.nextLine();
+        System.out.print("변경할 판매 여부를 결정해 주세요(Y/N): ");
+        String orderableStatus = sc.nextLine().toUpperCase();
+
+        Map<String, Object> criteria = new HashMap<>();
+        criteria.put("menuCode", menuCode);
+        criteria.put("menuName", menuName);
+        criteria.put("orderableStatus", orderableStatus);
+
+        return criteria;
+    }
+
+
+
+    /* 설명. 이번엔 SearchCriteria 대신 Map으로 진행 */
+    private static Map<String, Object> inputSearchCriteriaMap() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("검색 조건을 입력하세요(category or name or both or none): ");
         String condition = sc.nextLine();
 
-        Map<String,Object> criteria = new HashMap<>();
+        Map<String, Object> criteria = new HashMap<>();
         if("category".equals(condition)) {
             System.out.print("검색할 카테고리 코드를 입력하세요: ");
             int categoryValue = sc.nextInt();
@@ -154,7 +177,7 @@ public class Application {
             criteria.put("nameValue", nameValue);
             criteria.put("categoryValue", categoryValue);
         }
-         return criteria;
+        return criteria;
     }
 
 
