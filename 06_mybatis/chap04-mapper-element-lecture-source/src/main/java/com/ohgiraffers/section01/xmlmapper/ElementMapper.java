@@ -1,4 +1,4 @@
-package com.ohgiraffers.section01;
+package com.ohgiraffers.section01.xmlmapper;
 
 import java.util.List;
 

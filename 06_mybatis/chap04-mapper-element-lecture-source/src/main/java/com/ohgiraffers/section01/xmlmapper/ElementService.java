@@ -1,4 +1,4 @@
-package com.ohgiraffers.section01;
+package com.ohgiraffers.section01.xmlmapper;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -16,5 +16,8 @@ public class ElementService {
         menus.forEach(System.out::println);
 
         sqlSession.close();
+    }
+
+    public void selectResultMapAssociationTest() {
     }
 }
