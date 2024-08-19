@@ -6,4 +6,8 @@ public interface MenuMapper {
     List<MenuDTO> selectMenuByPrice(int price);
 
     List<MenuDTO> searchMenu(SearchCriteria searchCriteria);
+
+    List<MenuDTO> searchMenuBySupCategory(SearchCriteria searchCriteria);
+
+    List<MenuDTO> searchMenuByRandomMenuCode(List<Integer> randomList);
 }
