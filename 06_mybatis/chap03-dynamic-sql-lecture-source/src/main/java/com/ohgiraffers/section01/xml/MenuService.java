@@ -60,4 +60,19 @@ public class MenuService {
         sqlSession.close();
 
     }
+
+    public void searchMenuByCodeDrSearchAll(SearchCriteria searchCriteria) {
+        SqlSession sqlSession = getSqlSession();
+
+        MenuMapper mapper = sqlSession.getMapper(MenuMapper.class);
+        List<MenuDTO> menus = mapper.searchMenuByCodeDrSearchAll(searchCriteria);
+
+        if (menus != null && menus.size() > 0) {
+            menus.forEach(System.out::println);
+        } else {
+            System.out.println("DB와의 연동 실패 또는 검색 결과 없음");
+        }
+
+        sqlSession.close();
+    }
 }
