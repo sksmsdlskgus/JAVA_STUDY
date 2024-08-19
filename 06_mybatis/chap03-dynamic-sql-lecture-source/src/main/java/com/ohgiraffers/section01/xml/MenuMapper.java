@@ -1,6 +1,7 @@
 package com.ohgiraffers.section01.xml;
 
 import java.util.List;
+import java.util.Map;
 
 public interface MenuMapper {
     List<MenuDTO> selectMenuByPrice(int price);
@@ -11,5 +12,7 @@ public interface MenuMapper {
 
     List<MenuDTO> searchMenuByRandomMenuCode(List<Integer> randomList);
 
-    List<MenuDTO> searchMenuByCodeDrSearchAll(SearchCriteria searchCriteria);
+    List<MenuDTO> searchMenuByCodeOrSearchAll(SearchCriteria searchCriteria);
+
+    List<MenuDTO> searchMenuByNameOrCategory(Map<String, Object> criteria);
 }

@@ -36,7 +36,6 @@ public class Application {
     }
 
 
-
     private static void ifSubMenu() {
         Scanner sc = new Scanner(System.in);
         MenuService menuService = new MenuService();
@@ -106,7 +105,7 @@ public class Application {
     private static void trimSubMenu() {
         Scanner sc = new Scanner(System.in);
         MenuService menuService = new MenuService();
-        do{
+        do {
             System.out.println("======== trim 서브메뉴 ========");
             System.out.println("1. 검색 조건이 있는 경우 메뉴 코드로 조회, 단 없으면 전체 조회");
             System.out.println("2. 메뉴 혹은 카테고리로 검색, 단, 메뉴와 카테고리 둘 다 일치하는 경우도 검색하며, " +
@@ -117,14 +116,46 @@ public class Application {
             int no = sc.nextInt();
             switch (no) {
                 case 1:
-                    menuService.searchMenuByCodeDrSearchAll(inputAllOne());
+                    menuService.searchMenuByCodeOrSearchAll(inputAllOne());
                     break;
-                    case 9:
-                        return;
+                case 2:
+                    menuService.searchMenuByNameOrCategory(inputSearchCriteriaMap());
+                    break;
+                case 9:
+                    return;
             }
-        }while (true);
+        } while (true);
     }
 
+
+    /* 설명. 이번엔  SearchCriteria 대신 Map으로 진행  */
+    private static Map<String,Object> inputSearchCriteriaMap() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("검색 조건을 입력하세요(category or nameboth or name): ");
+        String condition = sc.nextLine();
+
+        Map<String,Object> criteria = new HashMap<>();
+        if("category".equals(condition)) {
+            System.out.print("검색할 카테고리 코드를 입력하세요: ");
+            int categoryValue = sc.nextInt();
+
+            criteria.put("categoryValue", categoryValue);
+        } else if("name".equals(condition)) {
+            System.out.print("검색할 메뉴 이름을 입력하세요: ");
+            String nameValue = sc.nextLine();
+
+            criteria.put("nameValue", nameValue);
+        } else if("both".equals(condition)) {
+            System.out.print("검색할 메뉴 이름을 입력하세요: ");
+            String nameValue = sc.nextLine();
+            System.out.print("검색할 카테고리 코드를 입력하세요: ");
+            int categoryValue = sc.nextInt();
+
+            criteria.put("nameValue", nameValue);
+            criteria.put("categoryValue", categoryValue);
+        }
+         return criteria;
+    }
 
 
     private static int inputPrice() {
@@ -157,8 +188,8 @@ public class Application {
 
         /* 설명. 중복되지 않는 5개의 난수를 Set으로 생성  */
         Set<Integer> set = new HashSet<>();
-        while (set.size() < 5){
-            int temp = (int)(Math.random() * 21) +1;
+        while (set.size() < 5) {
+            int temp = (int) (Math.random() * 21) + 1;
             set.add(temp);
         }
 
@@ -167,7 +198,7 @@ public class Application {
         Collections.sort(list);
 
         System.out.println("중복 없이 정렬 된 5개의 난수 확인 : " + list);
-        return  list;
+        return list;
     }
 
     private static SearchCriteria inputAllOne() {
@@ -177,7 +208,7 @@ public class Application {
         boolean hasSearchValue = "예".equals(sc.nextLine()) ? true : false;
 
         SearchCriteria searchCriteria = new SearchCriteria();
-        if(hasSearchValue){
+        if (hasSearchValue) {
             System.out.print("검색할 메뉴 코드를 입력하세요: ");
             String menuCode = sc.nextLine();
             searchCriteria.setCondition("menuCode");

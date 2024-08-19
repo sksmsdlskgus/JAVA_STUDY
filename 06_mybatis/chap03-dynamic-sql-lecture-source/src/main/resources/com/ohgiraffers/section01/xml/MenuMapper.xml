@@ -53,7 +53,7 @@
 
     <select id="searchMenu" parameterType="SearchCriteria" resultMap="menuResultMap">
         SELECT
-            A.MENU_CODE
+             A.MENU_CODE
            , A.MENU_NAME
            , A.MENU_PRICE
            , A.CATEGORY_CODE
@@ -74,7 +74,7 @@
 
     <select id="searchMenuBySupCategory" parameterType="SearchCriteria" resultMap="menuResultMap">
         SELECT
-           A.MENU_CODE
+             A.MENU_CODE
            , A.MENU_NAME
            , A.MENU_PRICE
            , A.CATEGORY_CODE
@@ -97,7 +97,7 @@
 
     <select id="searchMenuByRandomMenuCode" parameterType="SearchCriteria" resultMap="menuResultMap">
         SELECT
-            A.MENU_CODE
+             A.MENU_CODE
            , A.MENU_NAME
            , A.MENU_PRICE
            , A.CATEGORY_CODE
@@ -109,21 +109,36 @@
         </foreach>
     </select>
 
-    <select id="searchMenuByCodeDrSearchAll" parameterType="SearchCriteria" resultMap="menuResultMap">
+    <select id="searchMenuByCodeOrSearchAll" parameterType="SearchCriteria" resultMap="menuResultMap">
         SELECT
-           A.MENU_CODE
+             A.MENU_CODE
            , A.MENU_NAME
            , A.MENU_PRICE
-           , A.CATEGORY_CODE
+           , A.CATEGORY_CODEv
            , A.ORDERABLE_STATUS
          FROM TBL_MENU A
        <if test="condition != null and condition eq 'menuCode'" >
            WHERE A.MENU_CODE = #{ value }
        </if>
-
     </select>
 
-
+    <select id="searchMenuByNameOrCategory" parameterType="hashmap" resultMap="menuResultMap">
+        SELECT
+             A.MENU_CODE
+           , A.MENU_NAME
+           , A.MENU_PRICE
+           , A.CATEGORY_CODEv
+           , A.ORDERABLE_STATUS
+        FROM TBL_MENU A
+        <where>
+            <if test="nameValue != null">
+                A.MENU_CODE = #{ nameValue }
+            </if>
+            <if test="categoryValue != null">
+                AND A.MENU_CODE = #{ categoryValue }
+            </if>
+        </where>
+    </select>
 
 
 </mapper>
