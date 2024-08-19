@@ -16,5 +16,5 @@ public interface MenuMapper {
 
     List<MenuDTO> searchMenuByNameOrCategory(Map<String, Object> criteria);
 
-    int updateMenu(Map<String, Object> criteria);
+    int updateMenu(Map<String,Object> criteria);
 }
