@@ -1,5 +1,9 @@
 package com.ohgiraffers.transactional.section01.annotation;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 public class Order {
     private int orderCode;
     private String orderDate;
@@ -7,6 +11,14 @@ public class Order {
     private int totalOrderPrice;
 
     public Order() {
+    }
+
+    public Order(LocalDate orderDate, LocalTime orderTime, int totalOrderPrice) {
+
+        /* 설명. LocalDate 또는 LocalTime형을 DB에 맞춰서 저장하기 위한 변환작업 */
+        this.orderDate = orderDate.format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+        this.orderTime = orderTime.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+        this.totalOrderPrice = totalOrderPrice;
     }
 
     public Order(int orderCode, String orderDate, String orderTime, int totalOrderPrice) {
