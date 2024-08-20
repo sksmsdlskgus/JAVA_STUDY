@@ -1,30 +1,30 @@
 package com.ohgiraffers.transactional.section01.annotation;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-/* 설명. 테이블에 꼭 일치하지 않더라도 주문을 위해 사용자가 넘겨준 값을 담을 수 있는 DTO클래스 */
-/* 설명. DTO(Data Tensfer Object) : 계층을 넘어다니며 값을 옯겨주는 클래스 */
+/* 설명. 테이블에 꼭 일치하지 않더라도 주문을 위해 사용자가 넘겨준 값을 담을 수 있는 DTO 클래스 */
+/* 설명. DTO(Data Transfer Object): 계층을 넘어다니며 값을 옮겨주는 클래스 */
 public class OrderDTO {
-     private LocalDateTime orderDate;
-     private LocalTime orderTime;
-     private List<OrderMenuDTO> orderMenus;
+    private LocalDate orderDate;
+    private LocalTime orderTime;
+    private List<OrderMenuDTO> orderMenus;
 
     public OrderDTO() {
     }
 
-    public OrderDTO(LocalDateTime orderDate, LocalTime orderTime, List<OrderMenuDTO> orderMenus) {
+    public OrderDTO(LocalDate orderDate, LocalTime orderTime, List<OrderMenuDTO> orderMenus) {
         this.orderDate = orderDate;
         this.orderTime = orderTime;
         this.orderMenus = orderMenus;
     }
 
-    public LocalDateTime getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(LocalDateTime orderDate) {
+    public void setOrderDate(LocalDate orderDate) {
         this.orderDate = orderDate;
     }
 

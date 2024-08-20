@@ -3,8 +3,9 @@ package com.ohgiraffers.transactional.section01.annotation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -13,10 +14,12 @@ public class OrderService {
     /* 설명. sqlSession.getMapper() 대신 @Mapper가 달려 하위 구현체가 관리되면 의존성 주입 받을 수 있다. */
     private OrderMapper orderMapper;
     // 주문도 할거고 메뉴도 가져올거다
+    private MenuMapper manuMapper;
 
     @Autowired
-    public OrderService(OrderMapper orderMapper) {
+    public OrderService(OrderMapper orderMapper, MenuMapper manuMapper) {
         this.orderMapper = orderMapper;
+        this.manuMapper = manuMapper;
     }
 
     /* 설명.
@@ -29,22 +32,28 @@ public class OrderService {
 
     public void registNewOrder(OrderDTO orderInfo) {
         /* 설명. 1. 주문한 메뉴 코드 추출(DTO에서) */
-        List<Integer> menuCode2 = orderInfo.getOrderMenus()
+        List<Integer> menuCode = orderInfo.getOrderMenus()
                                             .stream()
                                             .map(OrderMenuDTO::getMenuCode)
                                             .collect(Collectors.toList());
 
-        List<Integer> menuCode = new ArrayList<>();
-        List<OrderMenuDTO> orderMenus = orderInfo.getOrderMenus();
-        for (OrderMenuDTO orderMenu : orderMenus) {
-            menuCode.add(orderMenu.getMenuCode());
-        }
+//        List<Integer> menuCode = new ArrayList<>();
+//        List<OrderMenuDTO> orderMenus = orderInfo.getOrderMenus();
+//        for (OrderMenuDTO orderMenu : orderMenus) {
+//            menuCode.add(orderMenu.getMenuCode());
+//        }
 
-        menuCode2.forEach(System.out::println);
-        menuCode.forEach(System.out::println);
+//        menuCode2.forEach(System.out::println);
+//        menuCode.forEach(System.out::println);
 
+        Map<String,List<Integer>> map = new HashMap<>();
+        map.put("menuCode",menuCode);
 
         /* 설명. 2. 주문한 메뉴 별로 Menu엔티티에 담아서 조회(select)해오기 (부가적인 메뉴의 정보 추출(단가 등( */
+        List<Menu> menus = MenuMapper.selectMenuByMenuCodese(map);
+
+
+
         /* 설명. 3. 이 주문건에 대한 주문 총 합계를 계산(insert 한번으로 처리하기 위해..) */
         /* 설명. 4. 1부터 3까지를 하면 tbl_order 테이블에 추가 (insert)가 가능 */
         /* 설명. 5. tbl_order_menu에도 주문한 메뉴 갯수만큼 주문한 메뉴를 추가(insert)한다. */
