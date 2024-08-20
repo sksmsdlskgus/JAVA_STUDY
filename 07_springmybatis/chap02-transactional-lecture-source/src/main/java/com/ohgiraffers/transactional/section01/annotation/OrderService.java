@@ -14,12 +14,12 @@ public class OrderService {
     /* 설명. sqlSession.getMapper() 대신 @Mapper가 달려 하위 구현체가 관리되면 의존성 주입 받을 수 있다. */
     private OrderMapper orderMapper;
     // 주문도 할거고 메뉴도 가져올거다
-    private MenuMapper manuMapper;
+    private MenuMapper menuMapper;
 
     @Autowired
-    public OrderService(OrderMapper orderMapper, MenuMapper manuMapper) {
+    public OrderService(OrderMapper orderMapper, MenuMapper menuMapper) {
         this.orderMapper = orderMapper;
-        this.manuMapper = manuMapper;
+        this.menuMapper = menuMapper;
     }
 
     /* 설명.
@@ -49,14 +49,28 @@ public class OrderService {
         Map<String,List<Integer>> map = new HashMap<>();
         map.put("menuCode",menuCode);
 
-        /* 설명. 2. 주문한 메뉴 별로 Menu엔티티에 담아서 조회(select)해오기 (부가적인 메뉴의 정보 추출(단가 등( */
-        List<Menu> menus = MenuMapper.selectMenuByMenuCodese(map);
-
-
+        /* 설명. 2. 주문한 메뉴 별로 Menu 담아서 조회(select)해오기 (부가적인 메뉴의 정보 추출(단가 등( */
+        List<Menu> menus = menuMapper.selectMenuByMenuCodes(map);
 
         /* 설명. 3. 이 주문건에 대한 주문 총 합계를 계산(insert 한번으로 처리하기 위해..) */
+      int totalOrderPrice = calcTotalOrderPrice(orderInfo.getOrderMenus(), menus);
+
         /* 설명. 4. 1부터 3까지를 하면 tbl_order 테이블에 추가 (insert)가 가능 */
         /* 설명. 5. tbl_order_menu에도 주문한 메뉴 갯수만큼 주문한 메뉴를 추가(insert)한다. */
+    }
+
+    /* 설명. 주문간에 대한 총 합계 금액 계산 메소드(orderMenus: 사용자의 주문내용, menus: 조회된 메뉴 전체 내용) */
+    private int calcTotalOrderPrice(List<OrderMenuDTO> orderMenus, List<Menu> menus) {
+        int totalOrderPrice = 0;
+
+        int orderMenuSize = orderMenus.size();
+        for (int i = 0; i < orderMenuSize; i++) {       // 하나의 메뉴에 대한 합계를 총 합계에 누적하는 반복문
+            OrderMenuDTO orderMenu = orderMenus.get(i);
+            Menu menu = menus.get(i);
+            totalOrderPrice += menu.getMenuPrice() * orderMenu.getOrderAmount();
+
+        }
+        return  totalOrderPrice;
     }
 
 }
