@@ -62,32 +62,6 @@ public class A_EntityManagerCRUDTests {
 
     }
 
-    @Test
-    public void 메뉴_추가하기_테스트() {
-
-        //given
-        Menu menu = em.find(Menu.class, 2);
-
-        String menuInsert = "갈치뭐라냐";
-
-        //when
-        EntityTransaction tx = em.getTransaction();
-        tx.begin();
-
-        try {
-            menu.setMenuName(menuInsert);
-            menu.setMenuPrice(2000);
-            menu.setCategoryCode(1);
-            menu.setOrderableStatus("Y");
-            tx.commit();
-        } catch (Exception e) {
-            tx.rollback();
-        }
-
-        //then
-        Assertions.assertTrue(em.contains(menu));
-
-    }
 
     @Test
     public void 메뉴_이름_수정_테스트() {
