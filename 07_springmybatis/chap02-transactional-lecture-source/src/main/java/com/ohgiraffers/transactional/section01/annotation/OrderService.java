@@ -2,6 +2,8 @@ package com.ohgiraffers.transactional.section01.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
@@ -73,7 +75,7 @@ public class OrderService {
      */
 
     /* 설명. 예외가 발생하지 않으면 commit, 아니면 rollback  */
-    @Transactional
+    @Transactional(isolation = Isolation.DEFAULT, propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
     public void registNewOrder(OrderDTO orderInfo) {
 
         /* 설명. 1. 주문한 메뉴 코드 추출(DTO에서) */
