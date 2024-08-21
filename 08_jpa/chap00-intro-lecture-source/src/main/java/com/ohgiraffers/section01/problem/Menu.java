@@ -4,17 +4,17 @@ public class Menu {
     private int menuCode;
     private String menuName;
     private int menuPrice;
-    private int category;
-    private  String orderableStatus;
+    private int categoryCode;
+    private String orderableStatus;
 
     public Menu() {
     }
 
-    public Menu(int menuCode, String menuName, int menuPrice, int category, String orderableStatus) {
+    public Menu(int menuCode, String menuName, int menuPrice, int categoryCode, String orderableStatus) {
         this.menuCode = menuCode;
         this.menuName = menuName;
         this.menuPrice = menuPrice;
-        this.category = category;
+        this.categoryCode = categoryCode;
         this.orderableStatus = orderableStatus;
     }
 
@@ -42,12 +42,12 @@ public class Menu {
         this.menuPrice = menuPrice;
     }
 
-    public int getCategory() {
-        return category;
+    public int getCategoryCode() {
+        return categoryCode;
     }
 
-    public void setCategory(int category) {
-        this.category = category;
+    public void setCategoryCode(int categoryCode) {
+        this.categoryCode = categoryCode;
     }
 
     public String getOrderableStatus() {
@@ -64,9 +64,8 @@ public class Menu {
                 "menuCode=" + menuCode +
                 ", menuName='" + menuName + '\'' +
                 ", menuPrice=" + menuPrice +
-                ", category=" + category +
+                ", categoryCode=" + categoryCode +
                 ", orderableStatus='" + orderableStatus + '\'' +
                 '}';
     }
 }
-
