@@ -4,6 +4,7 @@
     <persistence-unit name="jpatest">
 
         <!--   설명. 엔티티는 설정에 따로 추가할 것-->
+        <class>com.ohgiraffers.section02.crud.Menu</class>
 
         <properties>
 
@@ -16,6 +17,9 @@
             <!--            설명. hibernate 설정(실행되는 sql 구문을 괜찮은 format 형태로 보여주기)-->
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
+
+            <!-- 설명. Hibernate Dialect 설정 추가 -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
         </properties>
     </persistence-unit>
 </persistence>
