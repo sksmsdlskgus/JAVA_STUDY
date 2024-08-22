@@ -6,6 +6,8 @@
         <!--  설명. 엔티티는 설정에 따로 추가할 것-->
         <class>com.ohgiraffers.section01.manytoone.Category</class>
         <class>com.ohgiraffers.section01.manytoone.MenuAndCategory</class>
+        <class>com.ohgiraffers.section02.onetomany.Menu</class>
+        <class>com.ohgiraffers.section02.onetomany.CategoryAndMenu</class>
 
 
 
