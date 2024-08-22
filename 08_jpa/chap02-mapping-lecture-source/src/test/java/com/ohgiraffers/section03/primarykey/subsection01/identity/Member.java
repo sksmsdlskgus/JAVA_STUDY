@@ -7,6 +7,13 @@ import java.util.Date;
 @Entity(name="member_section03_subsection01")
 @Table(name="tbl_member_section03_subsection01")
 public class Member {
+    /* 설명.
+     *  strategy: 자동 생성 전략을 지정
+     *   - GenerationType.IDENTITY: 기본 키 생성을 데이터베이스에 위임(MySQL 또는 MariaDB의 auto_increment)
+     *   - GenerationType.SEQUENCE: 데이터베이스 시퀀스 객체 사용(ORACLE의 SEQUENCE)
+     *   - GenerationType.TABLE: 키 생성 테이블 사용
+     *   - GenerationType.AUTO: 자동 선택(MySQL의 IDENTITY 또는 ORACLE이면 SEQUENCE)
+     * */
 
     @Id
     @Column(name="member_no")

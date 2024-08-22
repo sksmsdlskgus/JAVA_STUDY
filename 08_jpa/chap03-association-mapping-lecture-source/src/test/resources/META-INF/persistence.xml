@@ -4,13 +4,9 @@
     <persistence-unit name="jpatest">
 
         <!--  설명. 엔티티는 설정에 따로 추가할 것-->
-        <class>com.ohgiraffers.section01.entity.Member</class>
-        <class>com.ohgiraffers.section02.column.Member</class>
-        <class>com.ohgiraffers.section03.primarykey.subsection01.identity.Member</class>
-        <class>com.ohgiraffers.section03.primarykey.subsection02.table.Member</class>
-        <class>com.ohgiraffers.section04.enumtype.Member</class>
-        <class>com.ohgiraffers.section05.compositekey.subsection01.embedded.Member</class>
-        <class>com.ohgiraffers.section05.compositekey.subsection02.idclass.Member</class>
+        <class>com.ohgiraffers.section01.manytoone.Category</class>
+        <class>com.ohgiraffers.section01.manytoone.MenuAndCategory</class>
+
 
 
         <properties>
@@ -27,7 +23,7 @@
 
             <!-- 설명. Hibernate Dialect 설정 추가 -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+<!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
         </properties>
     </persistence-unit>
 </persistence>
