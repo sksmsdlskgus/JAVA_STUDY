@@ -1,7 +1,5 @@
 package com.ohgiraffers.section02.onetomany;
 
-import com.ohgiraffers.section01.manytoone.Category;
-import com.ohgiraffers.section01.manytoone.MenuAndCategory;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
