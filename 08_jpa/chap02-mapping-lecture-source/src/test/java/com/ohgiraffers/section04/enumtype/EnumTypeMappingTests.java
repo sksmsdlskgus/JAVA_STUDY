@@ -1,4 +1,4 @@
-package com.ohgiraffers.section01.entity;
+package com.ohgiraffers.section04.enumtype;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -8,8 +8,7 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
-public class EntityMappingTests {
+public class EnumTypeMappingTests {
     private static EntityManagerFactory emf;
     private static EntityManager em;
 
@@ -24,7 +23,7 @@ public class EntityMappingTests {
     }
 
     @Test
-    public void 테이블_만들기_테스트() {
+    public void enum타입_매핑_테스트() {
 
         // given
         Member member = new Member();
@@ -36,7 +35,7 @@ public class EntityMappingTests {
         member.setEmail("hong@gmail.com");
         member.setAddress("서울시 서초구");
         member.setEnrollDate(new java.util.Date());
-        member.setMemberRole("ROLE_MEMBER");
+        member.setMemberRole(RoleType.ROLE_MANAGER);
         member.setStatus("Y");
 
         // when

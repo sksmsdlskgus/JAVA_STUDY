@@ -1,18 +1,21 @@
-package com.ohgiraffers.section01.entity;
+package com.ohgiraffers.section03.primarykey.subsection02.table;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
-@Entity(name="member_section01") // 엔티티 객체로 만들기 위한 어노테이션, 다른 패키지에 동일한 이름이 있으면 안됨
-@Table(name="tbl_member_section01") // 데이터베이스에 매핑 될 테이블 이름 설정
+@Entity(name="member_section03_subsection02")
+@Table(name="tbl_member_section03_subsection02")
+@TableGenerator(
+        name="member_seq_table_generatior",
+        table="tbl_member_seq",
+        pkColumnValue = "my_seq_member_no"
+)
 public class Member {
 
-    @Id                     // PK에 해당하는 속성에 지정(복합키일 경우 두가지 방식 존재(이후에 다룰 예정))
-    @Column(name="member_no")  // 데이터베이스에 대응되는 컬럼명 지정(타입 및 여러 제약조건 설정 가능)
+    @Id
+    @Column(name="member_no")
+    @GeneratedValue(strategy = GenerationType.TABLE, generator = "member_seq_table_generatior")
     private int memberNo;
 
     @Column(name="member_id")
@@ -34,7 +37,7 @@ public class Member {
     private String address;
 
     @Column(name="enroll_date")
-    private java.util.Date enrollDate;
+    private Date enrollDate;
 
     @Column(name="member_role")
     private String memberRole;

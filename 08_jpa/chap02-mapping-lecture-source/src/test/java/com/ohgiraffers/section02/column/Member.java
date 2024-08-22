@@ -1,14 +1,12 @@
-package com.ohgiraffers.section01.entity;
+package com.ohgiraffers.section02.column;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 
 import java.util.Date;
 
-@Entity(name="member_section01") // 엔티티 객체로 만들기 위한 어노테이션, 다른 패키지에 동일한 이름이 있으면 안됨
-@Table(name="tbl_member_section01") // 데이터베이스에 매핑 될 테이블 이름 설정
+@Entity(name="member_section02") // 엔티티 객체로 만들기 위한 어노테이션, 다른 패키지에 동일한 이름이 있으면 안됨
+@Table(name="tbl_member_section02") // 데이터베이스에 매핑 될 테이블 이름 설정
 public class Member {
 
     @Id                     // PK에 해당하는 속성에 지정(복합키일 경우 두가지 방식 존재(이후에 다룰 예정))
@@ -24,16 +22,19 @@ public class Member {
     @Column(name="nickname")
     private String nickname;
 
-    @Column(name="phone")
+    @Column(name="phone", columnDefinition = "varchar(200) default '010-000-0000'")
     private String phone;
 
-    @Column(name="email")
+    @Column(name="email", unique = true)
     private String email;
 
-    @Column(name="address")
+    @Column(name="address", nullable = false)
     private String address;
 
     @Column(name="enroll_date")
+//    @Temporal(TemporalType.TIMESTAMP)     // datetime
+//    @Temporal(TemporalType.DATE)      // date
+    @Temporal(TemporalType.TIME)        // time
     private java.util.Date enrollDate;
 
     @Column(name="member_role")

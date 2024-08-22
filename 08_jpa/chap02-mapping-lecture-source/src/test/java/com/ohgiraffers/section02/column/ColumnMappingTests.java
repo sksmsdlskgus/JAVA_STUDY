@@ -1,4 +1,4 @@
-package com.ohgiraffers.section01.entity;
+package com.ohgiraffers.section02.column;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -9,7 +9,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class EntityMappingTests {
+public class ColumnMappingTests {
     private static EntityManagerFactory emf;
     private static EntityManager em;
 
@@ -32,7 +32,7 @@ public class EntityMappingTests {
         member.setMemberId("user01");
         member.setMemberPwd("pass01");
         member.setNickname("아이유");
-        member.setPhone("010-1234-5678");
+        member.setPhone(null);
         member.setEmail("hong@gmail.com");
         member.setAddress("서울시 서초구");
         member.setEnrollDate(new java.util.Date());
