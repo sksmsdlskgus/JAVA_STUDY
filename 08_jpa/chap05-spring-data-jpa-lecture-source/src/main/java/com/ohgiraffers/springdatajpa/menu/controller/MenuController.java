@@ -1,6 +1,8 @@
 package com.ohgiraffers.springdatajpa.menu.controller;
 
 
+import com.ohgiraffers.springdatajpa.common.Pagination;
+import com.ohgiraffers.springdatajpa.common.PagingButtonInfo;
 import com.ohgiraffers.springdatajpa.menu.dto.MenuDTO;
 import com.ohgiraffers.springdatajpa.menu.service.MenuService;
 import lombok.extern.slf4j.Slf4j;
@@ -85,10 +87,11 @@ public class MenuController {
         log.debug("여러 페이지 총 현재 페이지 인덱스 : {}", menuDTOList.getNumber());
 
         /* 설명. 화면에서 페이징 버튼을 그려내기 위해 필요한 재료 준비(모듈화 2개) */
+        PagingButtonInfo paging = Pagination.getPagingButtonInfo(menuDTOList);
 
         model.addAttribute("menuList", menuDTOList);
         //list.html에서 받은 변수명 menuList를 받아 출력시킴 --> 스크롤 너무길어 -> 페이징처리
-
+        model.addAttribute("paging", paging);
 
         return "menu/list";
     }
