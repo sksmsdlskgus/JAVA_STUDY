@@ -1,0 +1,12 @@
+### GET request hello
+GET localhost:8080/response/hello
+
+### GET request random
+GET localhost:8080/response/random
+
+### GET request message
+GET localhost:8080/response/message
+
+### GET request complicated json Test
+GET localhost:8080/response/jsonTest
+
