@@ -1,5 +1,6 @@
 package com.ohgiraffers.springdatajpa.menu.dto;
 
+
 import lombok.*;
 
 @NoArgsConstructor
@@ -8,10 +9,9 @@ import lombok.*;
 @Setter
 @ToString
 public class CategoryDTO {
-
     private int categoryCode;
 
-    private int categoryName;
+    private String categoryName;
 
-    private int refCategoryCode;
+    private Integer refCategoryCode;
 }
