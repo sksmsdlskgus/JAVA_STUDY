@@ -10,3 +10,9 @@ GET localhost:8080/response/message
 ### GET request complicated json Test
 GET localhost:8080/response/jsonTest
 
+### GET request image
+GET localhost:8080/response/image
+
+### GET request ResponseEntity
+GET localhost:8080/response/entity
+
