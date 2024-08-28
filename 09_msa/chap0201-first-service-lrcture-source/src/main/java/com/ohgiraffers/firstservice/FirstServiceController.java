@@ -4,13 +4,11 @@ package com.ohgiraffers.firstservice;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Slf4j // 로그 찍기
+//@RequestMapping("/first-service")
 public class FirstServiceController {
 
     /* 설명. port 번호 확인을 위한 Environment 객헤 생성자 주입 */
