@@ -1,0 +1,9 @@
+### Send POST request with json body
+POST https://localhost:8111/users
+Content-Type: application/json
+
+{
+  "name": "홍길동",
+  "email" : "test@naver.com",
+  "pwd" : "pass01"
+}
