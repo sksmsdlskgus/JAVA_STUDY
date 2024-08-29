@@ -1,11 +1,10 @@
 package com.ohgiraffers.userservice.controller;
 
-
 import com.ohgiraffers.userservice.dto.UserDTO;
 import com.ohgiraffers.userservice.service.UserService;
 import com.ohgiraffers.userservice.vo.Hello;
 import com.ohgiraffers.userservice.vo.RequestResistUserVO;
-import com.ohgiraffers.userservice.vo.ResponseResistUserVO;
+import com.ohgiraffers.userservice.vo.ResponseRegistUserVO;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -25,7 +24,10 @@ public class UserController {
     private UserService userService;
 
     @Autowired
-    public UserController(Environment env, Hello hello, ModelMapper modelMapper, UserService userService) {
+    public UserController(Environment env,
+                          Hello hello,
+                          ModelMapper modelMapper,
+                          UserService userService) {
         this.env = env;
         this.hello = hello;
         this.modelMapper = modelMapper;
@@ -34,24 +36,31 @@ public class UserController {
 
     @GetMapping("/health")
     public String status() {
-        return "I'm Working in User Service" + env.getProperty("local.server.port");
+        return "I'm Working in User Service " + env.getProperty("local.server.port");
     }
 
-    /* 설명. 해당 마이크로 서비스가 application.yml에 설정 값이 제대로 들어있는지 확인(feat. @Value) */
+    /* 설명. 해당 마이크로 서비스가 application.yml에 설정 값이 제대로 들어 있는지 확인(feat. @Value) */
     @GetMapping("/welcome")
     public String welcome() {
         return hello.getMessage();
-
     }
 
-    /* 설명. 로그인 기능(feat. security 모듈 활용) 전에 회원가이 기능 만들기  */
+    /* 설명. 로그인 기능(feat. security 모듈 활용) 전에 회원가입 기능 만들기 */
     @PostMapping("users")
-    public ResponseEntity<ResponseResistUserVO> registUser(@RequestBody RequestResistUserVO newUser) {
+    public ResponseEntity<ResponseRegistUserVO> registUser(@RequestBody RequestResistUserVO newUser) {
         UserDTO userDTO = modelMapper.map(newUser, UserDTO.class);
 
         userService.registUser(userDTO);
 
-        return ResponseEntity.status(HttpStatus.OK).build();
-    }
+//        return ResponseEntity.status(HttpStatus.OK).build();
 
+        ResponseRegistUserVO responseUser = modelMapper.map(userDTO, ResponseRegistUserVO.class);
+        return ResponseEntity.status(HttpStatus.CREATED).body(responseUser);
+    }
 }
+
+
+
+
+
+

@@ -15,12 +15,13 @@ public class UserEntity {
     @Column(nullable = false, length = 50, unique = true)
     private String email;
 
-    @Column(nullable = false,unique = true)
-    private String pwd;
+    @Column(nullable = false, unique = true)
+//    private String pwd;
+    private String encryptedPwd;        // 암호화 이후
 
     @Column(nullable = false, length = 50)
     private String name;
 
     @Column(nullable = false, unique = true)
-    private String userId;     // 회원 가입 시 생성될 고유 회원 번호 (닉네임 개녕)
+    private String userId;          // 회원 가입 시 생성될 고유 회원 번호(닉네임 개념)
 }

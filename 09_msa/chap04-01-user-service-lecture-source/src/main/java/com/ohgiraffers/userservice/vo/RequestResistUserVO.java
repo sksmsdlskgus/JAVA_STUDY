@@ -7,5 +7,5 @@ import lombok.Data;
 public class RequestResistUserVO {
     private String email;
     private String name;
-    private String pwd;     // 암호화ㅏ 되기 전 사용자가 입력한 평문(비민번호)(plain text)
+    private String pwd;         // 암호화 되기 전 사용자가 입력한 평문(비밀번호)(plain text)
 }
