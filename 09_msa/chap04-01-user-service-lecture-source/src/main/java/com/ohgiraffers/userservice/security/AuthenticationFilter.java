@@ -55,4 +55,6 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
         log.info("로그인 성공하고 security가 관리하는 principal객체(authResult): {}", authResult);
     }
+
+
 }
