@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9689a935-021b-4953-bcbe-e851bd5a6287" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/chap01-01-eureka-server-lecture-source/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/chap01-01-eureka-server-lecture-source/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap01-01-eureka-server-lecture-source/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chap01-01-eureka-server-lecture-source/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap01-01-eureka-server-lecture-source/src/main/java/com/ohgiraffers/eurekaserver/Chap0101EurekaServerLectureSourceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap01-01-eureka-server-lecture-source/src/main/java/com/ohgiraffers/eurekaserver/Chap0101EurekaServerLectureSourceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap01-01-eureka-server-lecture-source/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/chap01-01-eureka-server-lecture-source/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap01-01-eureka-server-lecture-source/src/test/java/com/ohgiraffers/eurekaserver/Chap0101EurekaServerLectureSourceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap01-01-eureka-server-lecture-source/src/test/java/com/ohgiraffers/eurekaserver/Chap0101EurekaServerLectureSourceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap01-02-eureka-client-lecture-source/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chap01-02-eureka-client-lecture-source/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap01-02-eureka-client-lecture-source/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/chap01-02-eureka-client-lecture-source/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap02-02-second-service-lecture-source/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chap02-02-second-service-lecture-source/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap02-02-second-service-lecture-source/src/main/java/com/ohgiraffers/secondservice/SecondServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap02-02-second-service-lecture-source/src/main/java/com/ohgiraffers/secondservice/SecondServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap02-02-second-service-lecture-source/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/chap02-02-second-service-lecture-source/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap0201-first-service-lrcture-source/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap0201-first-service-lrcture-source/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap0201-first-service-lrcture-source/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap0201-first-service-lrcture-source/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap0201-first-service-lrcture-source/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap0201-first-service-lrcture-source/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap0201-first-service-lrcture-source/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap0201-first-service-lrcture-source/src/main/java/com/ohgiraffers/firstservice/Chap0201FirstServiceLrctureSourceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap0201-first-service-lrcture-source/src/main/java/com/ohgiraffers/firstservice/FirstServiceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap0201-first-service-lrcture-source/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap0201-first-service-lrcture-source/src/test/java/com/ohgiraffers/firstservice/Chap0201FirstServiceLrctureSourceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap03-spring-cloud-gateway-lecture-source/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/chap03-spring-cloud-gateway-lecture-source/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap03-spring-cloud-gateway-lecture-source/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chap03-spring-cloud-gateway-lecture-source/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap03-spring-cloud-gateway-lecture-source/src/main/java/com/ohgiraffers/springcloudgateway/Chap03SpringCloudGatewayLectureSourceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap03-spring-cloud-gateway-lecture-source/src/main/java/com/ohgiraffers/springcloudgateway/Chap03SpringCloudGatewayLectureSourceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap03-spring-cloud-gateway-lecture-source/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/chap03-spring-cloud-gateway-lecture-source/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/Chap0401UserServiceLectureSourceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/Chap0401UserServiceLectureSourceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/aggregate/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/aggregate/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/security/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/security/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/security/WebSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/security/WebSecurity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/user.http" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/user.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/vo/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/vo/Hello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/vo/RequestLoginVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/vo/RequestLoginVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/vo/RequestResistUserVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/vo/RequestResistUserVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/vo/ResponseRegistUserVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/java/com/ohgiraffers/userservice/vo/ResponseRegistUserVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/test/java/com/ohgiraffers/userservice/Chap0401UserServiceLectureSourceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap04-01-user-service-lecture-source/src/test/java/com/ohgiraffers/userservice/Chap0401UserServiceLectureSourceApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/chap01-01-eureka-server-lecture-source">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/chap01-02-eureka-client-lecture-source">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/chap02-01-first-service-lrcture-source">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/chap02-02-second-service-lecture-source">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/chap03-spring-cloud-gateway-lecture-source">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/chap04-01-user-service-lecture-source">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/chap04-02-order-service-lecture-source">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "sksmsdlskgus"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/sksmsdlskgus/JAVA_STUDY.git",
+    "accountId": "4db84f7b-2bba-4771-98ce-a7fb78e21626"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2lmYZnrz5si4ITBFqF96p0XeDyh" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/lecture/09_msa",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Chap0401UserServiceLectureSourceApplication">
+    <configuration name="Chap03SpringCloudGatewayLectureSourceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="springcloudgateway.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ohgiraffers.springcloudgateway.Chap03SpringCloudGatewayLectureSourceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Chap0401UserServiceLectureSourceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="userservice.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ohgiraffers.userservice.Chap0401UserServiceLectureSourceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Chap0402OrderServiceLectureSourceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="orderservice.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ohgiraffers.orderservice.Chap0402OrderServiceLectureSourceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9689a935-021b-4953-bcbe-e851bd5a6287" name="Changes" comment="" />
+      <created>1725786776655</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725786776655</updated>
+      <workItem from="1725786777716" duration="252000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

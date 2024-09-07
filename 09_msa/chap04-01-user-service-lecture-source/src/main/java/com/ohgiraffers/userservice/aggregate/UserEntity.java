@@ -24,4 +24,5 @@ public class UserEntity {
 
     @Column(nullable = false, unique = true)
     private String userId;          // 회원 가입 시 생성될 고유 회원 번호(닉네임 개념)
+
 }

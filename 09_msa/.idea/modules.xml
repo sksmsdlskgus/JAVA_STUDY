@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/09_msa.iml" filepath="$PROJECT_DIR$/.idea/09_msa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstservice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/firstservice.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/secondservice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/secondservice.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springcloudgateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/springcloudgateway.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userservice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/userservice.main.iml" />
+    </modules>
+  </component>
+</project>

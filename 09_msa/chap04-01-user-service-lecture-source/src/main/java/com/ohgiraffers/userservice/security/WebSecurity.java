@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
@@ -22,14 +23,17 @@ public class WebSecurity {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
     private UserService userService;
     private Environment env;
+    private JwtUtil jwtUtil;
 
     @Autowired
     public WebSecurity(BCryptPasswordEncoder bCryptPasswordEncoder
-            , UserService userService
-            , Environment env) {
+                        , UserService userService
+                        , Environment env
+                        , JwtUtil jwtUtil) {
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
         this.userService = userService;
         this.env = env;
+        this.jwtUtil = jwtUtil;
     }
 
     /* 설명. 인가(Authoriazation)용 메소드(인증 필터 추가) */
@@ -46,11 +50,15 @@ public class WebSecurity {
                 .passwordEncoder(bCryptPasswordEncoder);
 
         AuthenticationManager authenticationManager = authenticationManagerBuilder.build();
-
+        
         http.authorizeHttpRequests((authz) ->
-                        authz.requestMatchers(new AntPathRequestMatcher("/users/**", "POST")).permitAll()
-                                .anyRequest().authenticated()
-                )
+                authz.requestMatchers(new AntPathRequestMatcher("/health", "GET")).permitAll()
+                     .requestMatchers(new AntPathRequestMatcher("/welcome", "GET")).permitAll()
+                     .requestMatchers(new AntPathRequestMatcher("/users/**", "POST")).permitAll()
+                     .requestMatchers(new AntPathRequestMatcher("/users/**", "GET")).hasRole("ENTERPRISE")
+                     .requestMatchers(new AntPathRequestMatcher("/actuator/**")).permitAll()
+                     .anyRequest().authenticated()
+        )
                 /* 설명. authenticationManager 등록(UserDetails를 상속받는 Service 계층 + BCrypt 암호화) */
                 .authenticationManager(authenticationManager)
 
@@ -58,6 +66,7 @@ public class WebSecurity {
                 .sessionManagement((session) -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
         http.addFilter(getAuthenticationFilter(authenticationManager));
+        http.addFilterBefore(new JwtFilter(userService, jwtUtil), UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
