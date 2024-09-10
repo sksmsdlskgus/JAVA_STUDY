@@ -3,29 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/selecter.css">
+
+    <!-- 1. 내부 스타일 시트 방식 -->
     <style>
-        *{
-            color:red;
+        * {
+            color: red;
         }
 
-    p{
-        color:pink;
-    }
-    #id4{
-        color:black;
-    }
-    #id6{
-        color:aqua;
-    }
-    .class1{
-        color: purple;
-    }
+        p {
+            color: pink;
+        }
+
+        #id4 {
+            color: aqua;
+        }
+
+        #id6 {
+            color: black;
+        }
+
+        .class1 {
+            color: purple;
+        }
     </style>
+
+    <!-- 2. 외부 스타일 시트 방식-->
+    <link rel="stylesheet" href="css/selector.css">
     <title>Document</title>
 </head>
 <body>
-        <h1 style="color:purple">CSS 기본 선택자</h1>
+
+    <!-- 3. 인라인 방식 -->
+    <h1 style="color:purple; background-color: aquamarine;">CSS 기본 선택자</h1>
     <p>선택자(selector)란?<br>
         특정한 HTML 태그를 선택할 때 사용하는 기능으로, 태그를 선택하여 원하는 스타일과 기능을
         적용할 수 있다.
@@ -59,5 +68,23 @@
     </ul>
 
     <button>클릭!</button>
+
+    <!-- 선택자라는 개념은 이후 js(자바스크립트)에서도 활용할 수 있는 개념이다. -->
+    <script type="text/javascript">
+        let btn = document.querySelector('button');
+
+        btn.onclick = () => {
+            let testli = document.querySelectorAll('ul>li.class2');
+
+            for(let li = 0; li < testli.length; li++) {
+                testli[li].style.backgroundColor = 'red';
+            }
+        }
+
+        window.onload = function() {
+            let idTag = document.getElementById('id6');
+            console.log(idTag);
+        }
+    </script>
 </body>
 </html>
