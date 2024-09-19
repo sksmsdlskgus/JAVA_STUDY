@@ -7,7 +7,22 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- 데이터 바인딩 문법을 사용하여 데이터를 화면에 표시(템플릿 영역) -->
     <div id="app">{{ message }}</div>
+
+    <!-- 
+    vue.js에서 '{{}}'로 감싼 부분을 vue.js 바인딩 문법으로 이를 머스태취(Mustache) 문법 또는
+     보간법 (Interpolation)이라고한다.
+     
+     반응성(Reactivity): Vue에서 데이터를 DOM에 바인딩 하면 데이터 값이 변경될 때 마다 DOM이 자동으로 업데이트 된다.
+                        이는 Vue가 데이터와 DOM을 연결하고 관찰하여 데이터의 변경을 감지하고 자동으로 DOM을 업데이트 하는 반응성 시스템을 갖추고 있기 때문이다.
+    
+    데이터 바인딩(Data Binding): Vue에서 데이터와 DOM을 연결하는 매커니즘으로 이를 통해 Vue 인스턴스의 데이터를 
+                                html 템플릿에 동적으로 렌더링 할 수 있다.
+    
+    반응성 변수(React Variable): Vue.js에서 ref()나 reactive()와 같은 함수를 사용하여 관리할 데이터와 반응성 변수를 
+                               생성할 수 있다. 이러한 반응성 변수는 vue의 반응성 시스템에 의해 관리되며, 변수 값이 변경될 떄마다 연결된 html 요소에 자동으로 반영된다.
+     -->
 
         <script>
             console.log(Vue);
