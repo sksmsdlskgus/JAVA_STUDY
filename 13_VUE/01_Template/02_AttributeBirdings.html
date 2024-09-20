@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h3>속성 바인딩</h3>
+    <hr>
+    <div id="step01">
+        <h5>bind 구문</h5>
+        <div v-bind:id="dynamicId">{{ value }}</div>
+
+        <!-- v-bind는 생략이 가능 -->
+        <div :id="skipId">{{ skipValue }}</div>
+    </div>
+    <br>
+    <div id="step02">
+        <h5>비활성화</h5>
+        <input :disabled="isTrue" :value="isTrue">
+        <br>
+
+        <!-- @는 v-on 문법이며 'on+이벤트명'과 같은 기능을 한다. -->
+        <button @click="activation">{{ isTrue }}</button>
+    </div>
+    
+    <script>
+        const {createApp, ref, reactive} = Vue;
+        createApp({
+            setup() {
+                const dynamicId = ref('vue');
+                const value = ref('test');
+
+                const skipId = ref('skipId');
+                const skipValue = ref('skipValue');
+                return {
+                    dynamicId,
+                    value,
+                    skipId,
+                    skipValue
+                }
+            }
+        }).mount('#step01');
+
+        createApp({
+            setup() {
+                const isTrue = ref(false);
+                const refObj = ref({test: 'ttt'});
+                const reactiveObj = reactive({test: 'abc'});
+
+                const activation = () => {
+                    console.log(isTrue);
+                    console.log(refObj.value);
+                    console.log(reactiveObj);
+                    isTrue.value = !isTrue.value;
+                }
+
+                return {
+                    isTrue, 
+                    activation
+                }
+            }
+        }).mount('#step02');
+    </script>
+</body>
+</html>

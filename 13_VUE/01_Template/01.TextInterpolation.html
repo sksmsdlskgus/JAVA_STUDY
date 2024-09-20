@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 텍스트 보간법: 텍스트 사이에 동적 값을 "추정"하여 삽입하는 구문 -->
+     <div id="step01">
+        <span>message: {{ msg }}</span>
+        <hr>
+        <div v-text="msg"></div>
+        <div v-text="'message: ' + msg">abc</div>
+        <div id="inJs"></div>
+
+        <hr>
+        <h5>Raw Html</h5>
+        <p>Using text interpolation: {{ rawHtml }}</p>
+        <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+     </div>
+
+     <script>
+        document.getElementById("inJs").innerText = 'message: ' + 'abc';
+
+        const {createApp} = Vue
+
+        createApp({
+            setup() {
+                return {
+                    msg: "hello world12345",
+                    rawHtml: "<span style='color:red'>hello world</span>"
+                }
+            }
+        }).mount('#step01');
+
+     </script>
+</body>
+</html>
