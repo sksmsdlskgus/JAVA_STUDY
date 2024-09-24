@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <PropsParent/>
   </div>
 </template>
