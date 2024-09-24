@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+    watch:
+    데이터의 변경을 감지하고 그에 따라 추가 동작을 수행할 수 있다.
+    watch 함수는 vue인스턴스가 생성되고 setup 함수 내부에서 사용된다.
+    
+    [표현식]
+    watch(propertyName, callback(newValue, oldValue) => {})
+    1.propertyName:변경을 감지할 속성
+    2.callback: 변경 감지 시 수행할 동작
+    3.newValue: 현재 입력된 새로운 값
+    4.oldValue: 입력 이전의 값ㅅ
+    
+    결론은, 감시자(watch: )-->
+    <div class="step01">
+        <p>
+            현재 값 : {{ currentValue }}
+        </p>
+        <p>
+            이전 값 : {{ previousValue }}
+        </p>
+    </div>
+    
+    <script>
+        const {createApp, ref, watch} = Vue;
+
+        createApp({
+            setup() {
+                const currentValue = ref('');  //감시할 대상
+                const previousValue = ref(''); // 감시할 대상의 이전 값
+
+                watch(currentValue, (newVal, oldVal) => {
+                    if(newVal !== previousValue.value){
+                        console.log('watch를 통해 데이터 변경 후 로직 실행')
+                        console.log(newVal);
+                        console.log(oldVal);
+
+                        previousValue.value = oldVal;
+                    }
+                })
+
+                return {
+                    currentValue,
+                    previousValue
+                }
+            }
+        }).mount('#step01');
+    </script>
+    
+</body>
+</html>
