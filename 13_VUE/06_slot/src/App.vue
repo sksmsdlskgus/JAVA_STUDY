@@ -7,10 +7,25 @@ template은 다른 엘리먼트 요소를 감싸주는 역할을 수행하여 �
 (하나의 컴포넌트가 화면에 어떻게 보여질지 컴포넌트 단위의 html이 작성된다고 볼 수 있다.)
 -->
 <template>
-  <div>
-      <p>Hello!</p>
+
+  <header>
+    <p>Hello!</p>
       <MyComponent/>
-  </div>
+      <hr>
+  </header>
+  <br>
+
+      <main>
+        <SlotParent/>
+        <hr>
+        <div>
+          <NamedParent/>
+        </div>
+        <div>
+          <DynamicParent/>
+        </div>
+      </main>
+      
 </template>
 
 <!-- 
@@ -20,7 +35,11 @@ view model의 개념을 작성하는 영역이다.
 -->
 
 <script setup>
-  import MyComponent from './components/01_component/MyComponent.vue'
+  import MyComponent from './components/01_component/MyComponent.vue';
+  import SlotParent from './components/02_slotintro/SlotParent.vue';
+  // 자식을 임포트 해버리면 해당 데이터가 안뜬다 . 자식을 보여줘야 부모도 같이 보여지는 줄 알았는데 부모를 보여주면 자식을 보여주는것이군 
+  import NamedParent from './components/03_namedslot/NamedParent.vue';
+  import DynamicParent from './components/04_dynamicslot/DynamicParent.vue';
 </script>
 
 
