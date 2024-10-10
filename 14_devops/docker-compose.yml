@@ -3,7 +3,7 @@ services:
     build:
       context: ./chap01_01_bootProject
       dockerfile: Dockerfile
-    image: ys0915/boot_9_project:v2
+    image: nazzang/boot_9_project:v2
     container_name: boot-container
     ports:
       - "8055:7777"
@@ -14,7 +14,7 @@ services:
     build:
       context: ./chap01_02_vueProject
       dockerfile: Dockerfile
-    image: ys0915/vue_9_project:v2
+    image: nazzang/vue_9_project:v2
     container_name: vue-container
     ports:
       - "8011:5173"
