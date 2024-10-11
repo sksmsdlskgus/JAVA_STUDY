@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: boot-container
-        image: naxzzang/nine_b_project:latest
+        image: nazzang/nine_b_project:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 7777
