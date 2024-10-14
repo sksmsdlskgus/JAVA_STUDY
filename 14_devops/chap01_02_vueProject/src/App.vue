@@ -31,8 +31,13 @@
     // const response = await fetch(`http://localhost:8011/api/plus?num1=${num1.value}&num2=${num2.value}`);
    
   //  k8s를 통해 워커노드들로 띄워지고 난 이후(백엔드 :30001, 프론트엔드: 30000)
-    const response = await fetch(`http://localhost:30001/api/plus?num1=${num1.value}&num2=${num2.value}`);
+   // const response = await fetch(`http://localhost:30001/api/plus?num1=${num1.value}&num2=${num2.value}`);
 
+   /* Ingress 적용 이전 30001번의 백엔드 워커노드와 통신 */
+// const response = await fetch(`http://localhost:30001/plus?num1=${num1.value}&num2=${num2.value}`);
+
+/* Ingress를 활용한 절대 경로로 통신 */
+const response = await fetch(`/boot/plus?num1=${num1.value}&num2=${num2.value}`);
 
     const data = await response.json();
     result.value = data.sum;
